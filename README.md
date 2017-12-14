@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #### Project ini dibangun menggunakan:
 - Framework PHP CodeIgniter
 - Database Microsoft SQL Server
@@ -28,3 +29,7 @@ $db['default']['password'] = 'supas_mei_5102-ok';
 $db['default']['database'] = 'SHPED';
 $db['default']['dbdriver'] = 'sqlsrv';
 </pre>
+=======
+# cms
+CMS
+>>>>>>> 278f291e1553e6824dbc9a389e588c60dfc05743
