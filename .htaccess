@@ -2,8 +2,8 @@
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /bpom_ppid/index.php/$1 [L]
+    RewriteRule ^(.*)$ /cms/index.php/$1 [L]
 </IfModule>
 <IfModule !mod_rewrite.c>
-    ErrorDocument 404 /bpom_ppid/index.php
+    ErrorDocument 404 /cms/index.php
 </IfModule>
