@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../fonts/MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(../fonts/EInbV5DfGHOiMmvb1Xr-hugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Shadows Into Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Shadows Into Light'), local('ShadowsIntoLight'), url(../fonts/clhLqOv7MXn459PTh0gXYFK2TSYBz0eNcHnp4YqE4Ts.woff2) format('woff2');
+}
+
+.thumbnail{
+background-color:white;
+z-index:2;
+position:relative;
+margin-bottom:40px !important;
+}
+.thumbnails > li{
+margin-left:15px;
+float: left;
+}
+.thumbnail img,.thumbnail > a{
+z-index:2;
+height:100px;
+width:100px;
+position:relative;
+display: block;
+}
+
+img.grayscale{
+-webkit-filter: grayscale(1);
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+-o-filter: grayscale(100%);
+/*filter: url(desaturate.svg#grayscale);
+filter: gray;
+filter: grayscale(100%); */
+}
+
+.thumbnail .gallery-controls{
+position:absolute;
+z-index:1;
+margin-top:0px;
+height:22px;
+min-height:22px;
+width:80px;
+padding:0px;
+}
+.thumbnail .gallery-controls p{
+display:block;
+margin:auto;
+width:100%;
+}
+
+.thumbnail .gallery-controls .btn-img {
+    padding: 6px;
+}

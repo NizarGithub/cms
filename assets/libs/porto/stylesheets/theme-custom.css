@@ -1,0 +1,75 @@
+/* Add here all your CSS customizations */
+ #tabel-list thead tr th, .table thead tr th {
+	vertical-align:  middle;
+	text-align: center;
+ }
+ #tabel-list tbody tr td.center {
+	text-align: center;
+ }
+ .dokumen .panel-heading {
+	padding: 10px;
+ }
+ .dokumen .panel-title {
+	font-size: 15px;
+	text-align: center;
+ }
+ table thead tr th {
+	text-align: center;
+ }
+ input.right {
+	text-align: right;
+ }
+ input {
+	font-weight: bold;
+	/*text-transform:uppercase;*/
+ }
+ tr.not-approved {
+	color: #ed9c28;
+ }
+ #frmkualitas, #closeconfirm {
+  transform: scale(0.8);
+}
+.popup_visible #frmkualitas,.popup_visible #closeconfirm {
+  transform: scale(1);
+}
+.well {
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	display:none;
+	margin:1em;
+}
+.select2-drop  {
+	z-index: 2147483647;
+}
+.list-item {
+	border-bottom: 1px solid #FFF;
+	cursor: pointer;
+	opacity: 1;
+	text-align: left;
+}
+.list-item:hover {
+	opacity: 0.8;
+}
+.list-item.active {
+	background-color: #FFF;
+	color: #0088cc;
+	border-bottom: 1px solid #0088cc;
+	text-align: right;
+}
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+.perubahan {
+	font-weight: bold;
+	font-size: 14px;
+}
+.list-item.active-check {
+	background-color: #FFF;
+	color: #0088cc;
+	border-bottom: 1px solid #0088cc;
+}
+.md-editor.has-error textarea {
+    border: 1px solid #a94442;
+}
