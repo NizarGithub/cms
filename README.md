@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #### Project ini dibangun menggunakan:
 - Framework PHP CodeIgniter
 - Database MySQL
@@ -29,7 +28,3 @@ $db['default']['password'] = '';
 $db['default']['database'] = 'cms';
 $db['default']['dbdriver'] = 'mysqli';
 </pre>
-=======
-# cms
-CMS
->>>>>>> 278f291e1553e6824dbc9a389e588c60dfc05743
