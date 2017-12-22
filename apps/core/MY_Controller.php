@@ -8,6 +8,7 @@ class MY_Controller extends CI_Controller {
 	protected $data_redirect;
     protected $dataPage = array();
     protected $language = 'ina';
+    protected $ftpParam = array("host" => "127.0.0.1", "username" => "danukidd", "password" => "danukidd");
 
     public function __construct()
     {
@@ -27,6 +28,7 @@ class MY_Controller extends CI_Controller {
 
         $this->_getDataPageFrontend();
         $this->_getMenu();
+        $this->_setSettingSite();
     }
 
     // ----------------------------------------------------------------
@@ -71,8 +73,12 @@ class MY_Controller extends CI_Controller {
     private function _getDataPageFrontend()
     {
         $this->tabel->_table = "static";
-        $footer = $this->tabel->find_where(array('page' => 'page', 'key' => 'footer'));
-        $this->dataPage['footer'] = count($footer) > 0 ? nl2br($footer[0]->value) : '';
+        $infoPage = $this->tabel->find_where(array('page' => 'page'));
+        if (count($infoPage) > 0)
+            foreach ($infoPage as $k => $v) {
+                $this->dataPage[$v->key] = nl2br($v->value);
+            }
+        
     }
 
     private function _getMenu()
@@ -111,4 +117,11 @@ class MY_Controller extends CI_Controller {
         
         $this->dataPage['menu'] = $menu;
     } 
+
+    private function _setSettingSite()
+    {
+        $this->tabel->_table = "static";
+        $contentUrl = $this->tabel->find_where(array('page' => 'setting', 'key' => 'content_url'));
+        $this->session->set_userdata('bpom_ppid_content_url', count($contentUrl) > 0 ? $contentUrl[0]->value : '');
+    }
 }

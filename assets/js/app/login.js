@@ -1,4 +1,5 @@
-define(['jquery','jquery.browser.mobile','bootstrap','nanoscroller','bootstrap.datepicker','magnific.popup','jquery.placeholder'
+define(['jquery','jquery.browser.mobile','bootstrap'
+	//,'nanoscroller','bootstrap.datepicker','magnific.popup','jquery.placeholder'
 	,'jquery.validate','pnotify.custom','theme','theme.custom','theme.init'
 ]
 , function($) {
@@ -44,9 +45,9 @@ define(['jquery','jquery.browser.mobile','bootstrap','nanoscroller','bootstrap.d
 							title: 'Sukses',
 							text: data.msg,
 							type: 'success',
-							desktop: {
+							/*desktop: {
 								desktop: true
-							}
+							}*/
 						});
 						if (redirect != ''){
 							setTimeout("location.href = '" + redirect + "';", 2000);
@@ -66,9 +67,9 @@ define(['jquery','jquery.browser.mobile','bootstrap','nanoscroller','bootstrap.d
 							title: 'Error',
 							text: data.msg,
 							type: 'error',
-							desktop: {
+							/*desktop: {
 								desktop: true
-							}
+							}*/
 						});
 						if ($("#seccode").length > 0) $("#seccode").val(data.seccode);
 					}
@@ -86,9 +87,9 @@ define(['jquery','jquery.browser.mobile','bootstrap','nanoscroller','bootstrap.d
 							title: 'Error',
 							text: 'Terjadi error ketika mengakses server.',
 							type: 'error',
-							desktop: {
+							/*desktop: {
 								desktop: true
-							}
+							}*/
 						});
 				}).always(function(){
 					$el.trigger('loading-overlay:hide');

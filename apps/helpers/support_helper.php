@@ -124,3 +124,96 @@ function smart_resize_image($file,
 
     return true;
   }
+
+  function GetListFile($url, $type = "image")
+  {
+    $arrFile = array();
+
+    $matches = array();
+
+    preg_match_all("/(a href\=\")([^\?\"]*)(\")/i", get_text($url), $matches);
+
+    $regex = '';
+    if ($type == "image")
+      $regex = '/\.(jpe?g|bmp|png|gif|JPE?G|BMP|PNG|GIF)(?:[\?\#].*)?$/';
+
+    foreach($matches[2] as $match) {  
+        if (preg_match($regex, $match))
+          array_push($arrFile, $match);
+    }
+
+    return $arrFile;     
+  }
+
+function get_text($filename) {
+
+    $content = "";
+    $fp_load = fopen("$filename", "rb");
+
+    if ( $fp_load ) {
+
+        while ( !feof($fp_load) ) {
+            $content .= fgets($fp_load, 8192);
+        }
+
+        fclose($fp_load);
+
+        return $content;
+
+    }
+}
+
+function GetNewFilenameFTP($fileName, $conn_id)
+{
+  // set up a connection to the server we chose or die and show an error
+  //$conn_id = ftp_connect($ftpParam['host']) or die("Couldn't connect to " . $ftpParam['host']);
+  //ftp_login($conn_id, $ftpParam['username'], $ftpParam['password']);
+
+  // check if a file exist
+  $path = "/images/"; //the path where the file is located
+
+  $check_file_exist = $path.$fileName; //combine string for easy use
+
+  $contents_on_server = ftp_nlist($conn_id, $path); //Returns an array of filenames from the specified directory on success or FALSE on error. 
+
+  // Test if file is in the ftp_nlist array
+  if (in_array($check_file_exist, $contents_on_server)) 
+  {
+      $ext = strrpos($fileName, '.');
+      $fileName_a = substr($fileName, 0, $ext);
+      $fileName_b = substr($fileName, $ext);
+
+      $count = 1;
+      while (in_array($path . $fileName_a . '_' . $count . $fileName_b, $contents_on_server))
+          $count++;
+
+      $fileName = $fileName_a . '_' . $count . $fileName_b;
+  }
+
+  // output $contents_on_server, shows all the files it found, helps for debugging, you can use print_r() as well
+  //var_dump($contents_on_server);
+
+  // remember to always close your ftp connection
+  //ftp_close($conn_id);
+
+  return $fileName;
+}
+
+function CreateDirFTP($dir, $ftpParam)
+{
+  // set up basic connection
+  $conn_id = ftp_connect($ftpParam['host']);
+
+  // login with username and password
+  ftp_login($conn_id, $ftpParam['username'], $ftpParam['password']);
+
+  // try to create the directory $dir
+  if (!ftp_mkdir($conn_id, $dir)) {
+    die("Couldn't create dir $dir");
+  } 
+
+  // close the connection
+  ftp_close($conn_id);
+}
+
+

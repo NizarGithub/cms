@@ -4,7 +4,7 @@ CKEDITOR.plugins.add('imagebrowser', {
 			return;
 		}
 
-		var url = editor.plugins.imagebrowser.path + "browser/browser.html?listUrl=" + encodeURIComponent(editor.config.imageBrowser_listUrl);
+		var url = editor.plugins.imagebrowser.path + "browser/browser.html?listUrl=" + encodeURIComponent(editor.config.imageBrowser_listUrl) + "&contentUrl=" + encodeURIComponent(editor.config.imageBrowser_contentUrl);
 		if (editor.config.baseHref) {
 			url += "&baseHref=" + encodeURIComponent(editor.config.baseHref);
 		}

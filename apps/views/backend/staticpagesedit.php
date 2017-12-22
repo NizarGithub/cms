@@ -51,9 +51,9 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label" for="content-desc">Content <span class="required">*</span></label>
                         <div class="col-sm-9">
-                            <div id="content-desc-old" style="display:none"><?php echo htmlspecialchars_decode($staticpages->content); ?></div>
+                            <div id="content-desc-old" style="display:none"><?php echo str_replace("{{contenturl}}", $this->session->userdata('bpom_ppid_content_url'), htmlspecialchars_decode($staticpages->content)); ?></div>
                             <textarea cols="80" class="ckeditor-textarea form-control" id="content-desc" name="content-desc" rows="10">
-                                <?php echo htmlspecialchars_decode($staticpages->content); ?>
+                                <?php echo str_replace("{{contenturl}}", $this->session->userdata('bpom_ppid_content_url'), htmlspecialchars_decode($staticpages->content)); ?>
                             </textarea>
                         </div>
                     </div>

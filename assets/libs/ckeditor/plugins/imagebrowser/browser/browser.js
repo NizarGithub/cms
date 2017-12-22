@@ -7,9 +7,13 @@ CkEditorImageBrowser.ckFunctionNum = null;
 CkEditorImageBrowser.$folderSwitcher = null;
 CkEditorImageBrowser.$imagesContainer = null;
 
+CkEditorImageBrowser.contentUrl = null;
+
 CkEditorImageBrowser.init = function () {
 	CkEditorImageBrowser.$folderSwitcher = $('#js-folder-switcher');
 	CkEditorImageBrowser.$imagesContainer = $('#js-images-container');
+
+	CkEditorImageBrowser.contentUrl = CkEditorImageBrowser.getQueryStringParam("contentUrl");
 
 	var baseHref = CkEditorImageBrowser.getQueryStringParam("baseHref");
 	if (baseHref) {
@@ -66,8 +70,8 @@ CkEditorImageBrowser.addImage = function (folderName, imageUrl, thumbUrl) {
 	}
 
 	CkEditorImageBrowser.images[folderName].push({
-		"imageUrl": imageUrl,
-		"thumbUrl": thumbUrl
+		"imageUrl": CkEditorImageBrowser.contentUrl + imageUrl,
+		"thumbUrl": CkEditorImageBrowser.contentUrl + thumbUrl
 	});
 };
 

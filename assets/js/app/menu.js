@@ -1,7 +1,11 @@
-define(['jquery', 'jquery.migrate', 'jquery.browser.mobile', 'bootstrap', 'nanoscroller', 'raphael', 'highcharts', 'highcharts.exporting', 'bootstrap.datepicker', 'magnific.popup', 'jquery.placeholder'
-            ,'jquery.popupoverlay', 'jquery.validate', 'jquery.typeit', 'snap.svg', 'liquid.meter', 'pnotify.custom', 'theme', 'theme.custom', 'theme.init'
-            ,'jquery.dataTables','jquery.dataTables.tableTools','datatables', 'ckeditor', 'ckeditor.adapter'
-            , 'jquery.nestable'
+define(['jquery', 'jquery.migrate', 'jquery.browser.mobile', 'bootstrap', 'nanoscroller'
+    //, 'raphael', 'highcharts', 'highcharts.exporting', 'bootstrap.datepicker'
+    ,'magnific.popup', 'jquery.placeholder'
+    ,'jquery.popupoverlay', 'jquery.validate'
+    //, 'jquery.typeit', 'snap.svg', 'liquid.meter'
+    , 'pnotify.custom', 'theme', 'theme.custom', 'theme.init'
+    //,'jquery.dataTables','jquery.dataTables.tableTools','datatables', 'ckeditor', 'ckeditor.adapter'
+    , 'jquery.nestable'
 ]
         , function ($) {
             $(function () {

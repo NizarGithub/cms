@@ -1,6 +1,9 @@
-define(['jquery', 'jquery.migrate', 'jquery.browser.mobile', 'bootstrap', 'nanoscroller', 'raphael', 'highcharts', 'highcharts.exporting', 'bootstrap.datepicker', 'magnific.popup', 'jquery.placeholder'
-            , 'jquery.validate', 'jquery.typeit', 'snap.svg', 'liquid.meter', 'pnotify.custom', 'theme', 'theme.custom', 'theme.init'
-            ,'jquery.dataTables','jquery.dataTables.tableTools','datatables', 'ckeditor', 'ckeditor.adapter'
+define(['jquery', 'jquery.migrate', 'jquery.browser.mobile', 'bootstrap', 'nanoscroller'
+    //, 'raphael', 'highcharts', 'highcharts.exporting', 'bootstrap.datepicker'
+    , 'magnific.popup', 'jquery.placeholder', 'jquery.validate'
+    //, 'jquery.typeit', 'snap.svg', 'liquid.meter'
+    , 'pnotify.custom', 'theme', 'theme.custom', 'theme.init'
+    ,'jquery.dataTables','jquery.dataTables.tableTools','datatables', 'ckeditor', 'ckeditor.adapter'
 ]
         , function ($) {
             $(function () {
@@ -23,7 +26,8 @@ define(['jquery', 'jquery.migrate', 'jquery.browser.mobile', 'bootstrap', 'nanos
                 if ($('.ckeditor-textarea').length > 0)
                     $( '.ckeditor-textarea' ).ckeditor({
                         "extraPlugins": "imagebrowser",
-                        "imageBrowser_listUrl": $baseUrl + "content/list.json"
+                        "imageBrowser_listUrl": $baseUrl + "content/list.json",
+                        "imageBrowser_contentUrl": $contentUrl
                     });
 
                 var validobj = $("#frm-post").validate({

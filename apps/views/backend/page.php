@@ -48,6 +48,7 @@
 		
 		<script>
 		var $baseUrl = "<?php echo base_url(); ?>";
+		var $contentUrl = "<?php echo $this->session->userdata('bpom_ppid_content_url'); ?>";
 		var $currUrl = "<?php echo (current_url() == base_url()) ? base_url("dashboard") : current_url(); ?>";
 		</script>
 		

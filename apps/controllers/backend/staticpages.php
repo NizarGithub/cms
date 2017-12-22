@@ -39,10 +39,10 @@ class Staticpages extends MY_Controller {
         $dataSave['title'] = $data['title'];
         $dataSave['link'] = $data['link'];
         if ( get_magic_quotes_gpc() ){
-            $dataSave['content'] = htmlspecialchars( stripslashes((string)$data['content']) );
+            $dataSave['content'] = htmlspecialchars( stripslashes(str_replace($this->session->userdata('bpom_ppid_content_url'), "{{contenturl}}", (string)$data['content'])) );
         }
         else{
-            $dataSave['content'] = htmlspecialchars( (string)$data['content']);
+            $dataSave['content'] = htmlspecialchars( str_replace($this->session->userdata('bpom_ppid_content_url'), "{{contenturl}}", (string)$data['content']));
         }
         $dataSave['lang_id'] = $data['lang_id'];
         $dataSave['date_create'] = date('Y-m-d H:i:s');
@@ -83,10 +83,10 @@ class Staticpages extends MY_Controller {
         $dataSave['title'] = $data['title'];
         $dataSave['link'] = $data['link'];
         if ( get_magic_quotes_gpc() ){
-            $dataSave['content'] = htmlspecialchars( stripslashes((string)$data['content']) );
+            $dataSave['content'] = htmlspecialchars( stripslashes(str_replace($this->session->userdata('bpom_ppid_content_url'), "{{contenturl}}", (string)$data['content'])) );
         }
         else{
-            $dataSave['content'] = htmlspecialchars( (string)$data['content']);
+            $dataSave['content'] = htmlspecialchars( str_replace($this->session->userdata('bpom_ppid_content_url'), "{{contenturl}}", (string)$data['content']) );
         }
         $dataSave['lang_id'] = $data['lang_id'];
         $dataSave['date_update'] = date('Y-m-d H:i:s');

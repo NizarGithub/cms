@@ -7,7 +7,7 @@
 */
 
 $config['app_copyright'] = 'Copyright &copy; ' . date('Y');
-$config['app_title_prefix'] = 'PPID - Badan POM';
+$config['app_title_prefix'] = 'Badan Pengawas Obat dan Makanan - Republik Indonesia';
 $config['app_name'] = 'PPID Badan Pengawas Obat dan Makanan';
 $config['app_version'] = '1.0';
 $config['site_url'] = 'http://www.pom.go.id/';

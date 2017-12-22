@@ -27,7 +27,7 @@
                 <?php if (count($gallery) > 0): ?>
                 <?php $idx = 1; foreach ($gallery as $img): if ($img !=""): ?>
                     <li id="<?php echo $img; ?>" class="thumbnail">
-                        <a style="background:url(<?php echo base_url() . APPCONTENT . "images/thumbs/" . $img;?>)" title="<?php echo $img; ?>" href="<?php echo base_url() . APPCONTENT . "images/" . $img;?>"><img class="grayscale_" src="<?php echo base_url() . APPCONTENT . "images/thumbs/" . $img;?>" alt="<?php echo $img; ?>"></a>
+                        <a style="background:url(<?php echo $this->session->userdata('bpom_ppid_content_url') . "images/thumbs/" . $img;?>)" title="<?php echo $img; ?>" href="<?php echo $this->session->userdata('bpom_ppid_content_url') . "images/" . $img;?>"><img class="grayscale_" src="<?php echo $this->session->userdata('bpom_ppid_content_url') . "images/thumbs/" . $img;?>" alt="<?php echo $img; ?>"></a>
                         <!-- <div class="gallery-controls">
                             <p><a href="#" class="gallery-edit btn btn-img"><i class="fa fa-pencil-square-o"></i></a> <a href="#" class="gallery-delete btn btn-img"><i class="fa fa-times"></i></a></p>
                         </div> -->

@@ -1,8 +1,12 @@
-define(['jquery', 'jquery.migrate', 'jquery.browser.mobile', 'bootstrap', 'nanoscroller', 'raphael', 'highcharts', 'highcharts.exporting', 'bootstrap.datepicker', 'magnific.popup', 'jquery.placeholder'
-            , 'jquery.validate', 'jquery.typeit', 'snap.svg', 'liquid.meter', 'pnotify.custom', 'theme', 'theme.custom', 'theme.init'
-            ,'jquery.dataTables','jquery.dataTables.tableTools','datatables', 'ckeditor', 'ckeditor.adapter', 'colorbox'
-            , 'plupload', 'plupload.gears', 'plupload.silverlight', 'plupload.flash', 'plupload.browserplus', 'plupload.html4'
-            , 'plupload.html5', 'jquery.plupload.queue'
+define(['jquery', 'jquery.migrate', 'jquery.browser.mobile', 'bootstrap'
+    //, 'nanoscroller', 'raphael', 'highcharts', 'highcharts.exporting', 'bootstrap.datepicker', 'magnific.popup', 'jquery.placeholder'
+    //, 'jquery.validate', 'jquery.typeit', 'snap.svg', 'liquid.meter'
+    , 'pnotify.custom', 'theme', 'theme.custom', 'theme.init'
+    //,'jquery.dataTables','jquery.dataTables.tableTools','datatables'
+    //, 'ckeditor', 'ckeditor.adapter'
+    , 'colorbox'
+    , 'plupload', 'plupload.gears', 'plupload.silverlight', 'plupload.flash', 'plupload.browserplus', 'plupload.html4'
+    , 'plupload.html5', 'jquery.plupload.queue'
 ]
         , function ($) {
             $(function () {
@@ -90,7 +94,7 @@ define(['jquery', 'jquery.migrate', 'jquery.browser.mobile', 'bootstrap', 'nanos
                             //$("<span>"+ response.filename +"</span>").appendTo($(".plupload_file_name", "#" + file.id));
                             var counter = $("li.thumbnail").length + 1;
                             $(".gallery").append("<li id=\"" + response.filename + "\" class=\"thumbnail\">" +
-                                                        "<a style=\"background:url(" + $baseUrl + "content/images/thumbs/"+ response.filename +"\" title=\"" + response.filename + "\" href=\"" + $baseUrl + "content/images/"+ response.filename +"\"><img class=\"grayscale_\" src=\""+ $baseUrl + "content/images/thumbs/" + response.filename + "\" alt=\"" + response.filename + "\"></a>" +
+                                                        "<a style=\"background:url(" + $contentUrl + "images/thumbs/"+ response.filename +"\" title=\"" + response.filename + "\" href=\"" + $contentUrl + "images/"+ response.filename +"\"><img class=\"grayscale_\" src=\""+ $contentUrl + "images/thumbs/" + response.filename + "\" alt=\"" + response.filename + "\"></a>" +
                                                     "</li>");
                             $('.thumbnail a').colorbox({rel:'thumbnail a', transition:"elastic", maxWidth:"95%", maxHeight:"95%"});
                         }
