@@ -91,4 +91,51 @@ ORDER BY A.deskripsi";
         return $data;
     }
 
+    public function SelectVisitorToday($tanggal){
+        $query = "
+SELECT COUNT(ip) jml FROM statistics WHERE access_date = ?";
+
+        $sql = $this->db->query($query, array($tanggal));
+        $data = 0;
+        if ($sql->num_rows() > 0)
+            $data = $sql->result()[0]->jml;
+        $sql->free_result();
+        return $data;
+    }
+
+    public function SelectVisitorOnline($bataswaktu){
+        $query = "
+SELECT COUNT(*) jml FROM statistics WHERE online > ?";
+
+        $sql = $this->db->query($query, array($bataswaktu));
+        $data = 0;
+        if ($sql->num_rows() > 0)
+            $data = $sql->result()[0]->jml;
+        $sql->free_result();
+        return $data;
+    }
+
+    public function SelectVisitorTotal(){
+        $query = "
+SELECT COUNT(hits) jml FROM statistics";
+
+        $sql = $this->db->query($query);
+        $data = 0;
+        if ($sql->num_rows() > 0)
+            $data = $sql->result()[0]->jml;
+        $sql->free_result();
+        return $data;
+    }
+
+    public function SelectVisitorYear($year){
+        $query = "
+SELECT COUNT(ip) jml FROM statistics WHERE YEAR(access_date) = ?";
+
+        $sql = $this->db->query($query, array($year));
+        $data = 0;
+        if ($sql->num_rows() > 0)
+            $data = $sql->result()[0]->jml;
+        $sql->free_result();
+        return $data;
+    }
 }

@@ -12,7 +12,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="refresh" content="5000">
 	<meta name="viewport" content="width=device-width">
-	<title><?php echo $this->config->item('app_title_prefix') . (isset($title) && $title != '' ? ' | ' . $title : ''); ?></title>
+	<title><?php echo (isset($dataPage["site_title"]) ? $dataPage["site_title"] : '') . (isset($title) && $title != '' ? ' | ' . $title : ''); ?></title>
 	<style type="text/css">
 	img.wp-smiley, img.emoji { display: inline !important; border: none !important; box-shadow: none !important; height: 1em !important; width: 1em !important; margin: 0 .07em !important; vertical-align: -0.1em !important; background: none !important; padding: 0 !important; }
 	</style>
@@ -177,22 +177,22 @@
 																<div class="col-md-9 col-sm-12 e_equal e_right">
 																	<div class="e_tab_content">
 																		<div id="persmenu" class="container-fluid e_tab_pane active" itemscope class="e_microdata">
-																			<div class="row e_first"><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><a href="<?php echo base_url(); ?>browse/more/pers" class="e_button e_icon e_primary e_style_02 e_small">Selengkapnya &nbsp;&raquo;</a></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/pers/391/SIARAN-PERS--AKSI-PEDULI-KOSMETIKA-AMAN--DAN-OBAT-TRADISIONAL-BEBAS-BAHAN-KIMIA-OBAT.html">Siaran Pers  Aksi Peduli Kosmetika&#8230;</a></h5><p class="e_meta"><time class="e_date">11 Des 2017 13:15 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/pers/390/SIARAN-PERS---MOBIL-PENYIDIKAN-BADAN-POM-Pendukung-Penegakan-Hukum-di-Bidang-Obat-dan-Makanan.html">Siaran Pers   Mobil Penyidikan Badan&#8230;</a></h5><p class="e_meta"><time class="e_date">27 Nov 2017 13:00 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/pers/389/SIARAN-PERS---GERAKAN-MASYARAKAT-HIDUP-SEHAT-SADAR-PANGAN-AMAN--GERMAS-SAPA--Kerja-Bersama-Menuju-Indonesia-Pangan-Aman.html">Siaran Pers   Gerakan Masyarakat Hidup&#8230;</a></h5><p class="e_meta"><time class="e_date">23 Nov 2017 10:00 WIB</time></p></article></div></div>
+																			<div class="row e_first"><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><a href="<?php echo base_url(); ?>browse/more/pers" class="e_button e_icon e_primary e_style_02 e_small">Selengkapnya &nbsp;&raquo;</a></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>assets/frontend/data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/pers/391/SIARAN-PERS--AKSI-PEDULI-KOSMETIKA-AMAN--DAN-OBAT-TRADISIONAL-BEBAS-BAHAN-KIMIA-OBAT.html">Siaran Pers  Aksi Peduli Kosmetika&#8230;</a></h5><p class="e_meta"><time class="e_date">11 Des 2017 13:15 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>assets/frontend/data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/pers/390/SIARAN-PERS---MOBIL-PENYIDIKAN-BADAN-POM-Pendukung-Penegakan-Hukum-di-Bidang-Obat-dan-Makanan.html">Siaran Pers   Mobil Penyidikan Badan&#8230;</a></h5><p class="e_meta"><time class="e_date">27 Nov 2017 13:00 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>assets/frontend/data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/pers/389/SIARAN-PERS---GERAKAN-MASYARAKAT-HIDUP-SEHAT-SADAR-PANGAN-AMAN--GERMAS-SAPA--Kerja-Bersama-Menuju-Indonesia-Pangan-Aman.html">Siaran Pers   Gerakan Masyarakat Hidup&#8230;</a></h5><p class="e_meta"><time class="e_date">23 Nov 2017 10:00 WIB</time></p></article></div></div>
 																		</div>
 																		<div id="beritamenu" class="container-fluid e_tab_pane " class="e_microdata">
 																			<div class="row e_first"><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><a href="<?php echo base_url(); ?>browse/more/berita/0" class="e_button e_icon e_primary e_style_02 e_small">Selengkapnya &nbsp;&raquo;</a></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>admin/dat/20171212/Denpasar_Germassapa_061217_01.jpg" class="entry-thumb img-responsive clearfix wp-post-image" style="height:110px"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/berita/13873/GERMAS-SAPA-BPOM-On-Air-di-Kompas-TV.html">Germas Sapa BPOM On Air&#8230;</a></h5><p class="e_meta"><time class="e_date">12 Des 2017 15:06 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>admin/dat/20171211/PKP_GERMASAPA_1112201704.jpg" class="entry-thumb img-responsive clearfix wp-post-image" style="height:110px"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/berita/13872/Mari--wujudkan-Budaya-Keamanan-pangan-di-Bangka-Belitung-dengan-Germas-Sapa.html">Mari  Wujudkan Budaya Keamanan Pangan&#8230;</a></h5><p class="e_meta"><time class="e_date">11 Des 2017 16:25 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>admin/dat/20171211/PKP_PEMUSNAHAN_1112201701.JPG" class="entry-thumb img-responsive clearfix wp-post-image" style="height:110px"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/berita/13871/Balai-POM-di-Pangkalpinang-Musnahkan-Obat-dan-Makanan-Ilegal-.html">Balai POM di Pangkalpinang Musnahkan&#8230;</a></h5><p class="e_meta"><time class="e_date">11 Des 2017 16:12 WIB</time></p></article></div></div>
 																		</div>
 																		<div id="klarifikasimenu" class="container-fluid e_tab_pane " itemscope class="e_microdata">
-																			<div class="row e_first"><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><a href="<?php echo base_url(); ?>browse/more/klarifikasi" class="e_button e_icon e_primary e_style_02 e_small">Selengkapnya &nbsp;&raquo;</a></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/klarifikasi/72/PENJELASAN-BADAN-POM-RI--TERKAIT-ISU-KEAMANAN-VAKSIN-DENGUE--DEMAM-BERDARAH-.html">Penjelasan Badan POM Ri  Terkait&#8230;</a></h5><p class="e_meta"><time class="e_date">12 Des 2017 09:00 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/klarifikasi/71/KLARIFIKASI-BADAN-POM-RI---TERKAIT-PENIPUAN-DALAM-RANGKA-HUT-BADAN-POM-RI-KE-17--YANG-MENGATASNAMAKAN-PEJABAT-BADAN-POM-RI.html">Klarifikasi Badan POM Ri   Terkait&#8230;</a></h5><p class="e_meta"><time class="e_date">7 Des 2017 19:00 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/klarifikasi/70/PENJELASAN-BADAN-POM-RI-TENTANG--PEREDARAN-PRODUK-KANGEN-WATER.html">Penjelasan Badan POM Ri Tentang&#8230;</a></h5><p class="e_meta"><time class="e_date">6 Des 2017 13:00 WIB</time></p></article></div></div>
+																			<div class="row e_first"><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><a href="<?php echo base_url(); ?>browse/more/klarifikasi" class="e_button e_icon e_primary e_style_02 e_small">Selengkapnya &nbsp;&raquo;</a></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>assets/frontend/data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/klarifikasi/72/PENJELASAN-BADAN-POM-RI--TERKAIT-ISU-KEAMANAN-VAKSIN-DENGUE--DEMAM-BERDARAH-.html">Penjelasan Badan POM Ri  Terkait&#8230;</a></h5><p class="e_meta"><time class="e_date">12 Des 2017 09:00 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>assets/frontend/data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/klarifikasi/71/KLARIFIKASI-BADAN-POM-RI---TERKAIT-PENIPUAN-DALAM-RANGKA-HUT-BADAN-POM-RI-KE-17--YANG-MENGATASNAMAKAN-PEJABAT-BADAN-POM-RI.html">Klarifikasi Badan POM Ri   Terkait&#8230;</a></h5><p class="e_meta"><time class="e_date">7 Des 2017 19:00 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>assets/frontend/data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/klarifikasi/70/PENJELASAN-BADAN-POM-RI-TENTANG--PEREDARAN-PRODUK-KANGEN-WATER.html">Penjelasan Badan POM Ri Tentang&#8230;</a></h5><p class="e_meta"><time class="e_date">6 Des 2017 13:00 WIB</time></p></article></div></div>
 																		</div>
 																		<div id="edaranmenu" class="container-fluid e_tab_pane " itemscope class="e_microdata">
-																			<div class="row e_first"><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><a href="<?php echo base_url(); ?>browse/more/berita/1" class="e_button e_icon e_primary e_style_02 e_small">Selengkapnya &nbsp;&raquo;</a></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image" style="height:110px"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/berita/12407/Suplemen-Kesehatan-Yang-Mengandung-DHA.html">Suplemen Kesehatan Yang Mengandung Dha</a></h5><p class="e_meta"><time class="e_date">12 Jan 2017 14:18 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image" style="height:110px"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/berita/12290/Penyampaian-Laporan-Pemasukan--Penggunaan-dan-Penyaluran-Bahan-Obat-dan-Obat-Obat-Tertentu.html">Penyampaian Laporan Pemasukan, Penggunaan dan&#8230;</a></h5><p class="e_meta"><time class="e_date">7 Des 2016 16:00 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image" style="height:110px"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/berita/12223/Penjelasan-Bahan-Perwarna-Rambut.html">Penjelasan Bahan Perwarna Rambut</a></h5><p class="e_meta"><time class="e_date">28 Nov 2016 13:54 WIB</time></p></article></div></div>
+																			<div class="row e_first"><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><a href="<?php echo base_url(); ?>browse/more/berita/1" class="e_button e_icon e_primary e_style_02 e_small">Selengkapnya &nbsp;&raquo;</a></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>assets/frontend/data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image" style="height:110px"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/berita/12407/Suplemen-Kesehatan-Yang-Mengandung-DHA.html">Suplemen Kesehatan Yang Mengandung Dha</a></h5><p class="e_meta"><time class="e_date">12 Jan 2017 14:18 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>assets/frontend/data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image" style="height:110px"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/berita/12290/Penyampaian-Laporan-Pemasukan--Penggunaan-dan-Penyaluran-Bahan-Obat-dan-Obat-Obat-Tertentu.html">Penyampaian Laporan Pemasukan, Penggunaan dan&#8230;</a></h5><p class="e_meta"><time class="e_date">7 Des 2016 16:00 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>assets/frontend/data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image" style="height:110px"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/berita/12223/Penjelasan-Bahan-Perwarna-Rambut.html">Penjelasan Bahan Perwarna Rambut</a></h5><p class="e_meta"><time class="e_date">28 Nov 2016 13:54 WIB</time></p></article></div></div>
 																		</div>
 																		<div id="internalmenu" class="container-fluid e_tab_pane " itemscope class="e_microdata">
 																			<div class="row e_first" style="padding-left: 10px"><p style="margin-bottom:10px">Masukkan User ID dan Password yang Anda Miliki untuk Dapat Mengakses Halaman ini</p><p><form method="post" id="login-form" class="search-form clearfix" style="padding-bottom: 10px" name="login-form" action="<?php echo base_url(); ?>browse/more/internal"><input autocomplete="off" type="text" value="" name="uid" placeholder="User ID" class="text" style="width:200px" required> &nbsp;<input autocomplete="off" type="password" value="" name="pwd" placeholder="Password" class="text" style="width:200px" required> &nbsp;<input type="submit" style="padding: 5px" value=" MASUK " name="sublogin" id="sublogin"></form><br></p>																			</div>
 																		</div>
 																		<div id="kalendermenu" class="container-fluid e_tab_pane " itemscope class="e_microdata">
-																			<div class="row e_first"><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><a href="<?php echo base_url(); ?>browse/more/kalender" class="e_button e_icon e_primary e_style_02 e_small">Selengkapnya &nbsp;&raquo;</a></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/kalender/26/Jadwal-Tentative-Kegiatan-Perencanaan--Penganggaran-dan-Evaluasi-Tahun-2017.html">Jadwal Tentative Kegiatan Perencanaan, Penganggaran&#8230;</a></h5><p class="e_meta"><time class="e_date">11 Jan 2017 16:00 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/kalender/24/Undangan-Sosialisasi-Program-BMDTP.html">Undangan Sosialisasi Program Bmdtp</a></h5><p class="e_meta"><time class="e_date">15 Sep 2016 16:52 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/kalender/25/Training-on-The-ASEAN-Guidelines-on-Stability-and-Shelf-life-of-Traditional-Medicines-and-Health-Supplements.html">Training On The Asean Guidelines&#8230;</a></h5><p class="e_meta"><time class="e_date">7 Sep 2016 10:49 WIB</time></p></article></div></div>
+																			<div class="row e_first"><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><a href="<?php echo base_url(); ?>browse/more/kalender" class="e_button e_icon e_primary e_style_02 e_small">Selengkapnya &nbsp;&raquo;</a></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>assets/frontend/data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/kalender/26/Jadwal-Tentative-Kegiatan-Perencanaan--Penganggaran-dan-Evaluasi-Tahun-2017.html">Jadwal Tentative Kegiatan Perencanaan, Penganggaran&#8230;</a></h5><p class="e_meta"><time class="e_date">11 Jan 2017 16:00 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>assets/frontend/data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/kalender/24/Undangan-Sosialisasi-Program-BMDTP.html">Undangan Sosialisasi Program Bmdtp</a></h5><p class="e_meta"><time class="e_date">15 Sep 2016 16:52 WIB</time></p></article></div><div class="col-md-3 col-sm-6 col-xs-12"><article class="e_item clearfix"><img src="<?php echo base_url(); ?>assets/frontend/data/380x235.gif" class="entry-thumb img-responsive clearfix wp-post-image"/><h5 class="entry-title"><a href="<?php echo base_url(); ?>view/more/kalender/25/Training-on-The-ASEAN-Guidelines-on-Stability-and-Shelf-life-of-Traditional-Medicines-and-Health-Supplements.html">Training On The Asean Guidelines&#8230;</a></h5><p class="e_meta"><time class="e_date">7 Sep 2016 10:49 WIB</time></p></article></div></div>
 																		</div>
 																	</div>
 																</div>
@@ -421,8 +421,8 @@
 			
 			
 			<div class="e_middle"><div class="e_container clearfix container"><div class="clearfix">
-				<div class="e_left pull-left"><figure class="e_site_logo"><a href="<?php echo base_url(); ?>" title=""><img src="<?php echo base_url(); ?>data/logo-2016-s.png"></a></figure></div>
-				<div class="e_right pull-right hide_mobile"><a class="e_top_banner e_style_01 pull-right" href="" target="_blank"><figure><img src="<?php echo base_url(); ?>data/cek-klik-2017.jpg" style="height: 110px"></figure></a></div>
+				<div class="e_left pull-left"><figure class="e_site_logo"><a href="<?php echo base_url(); ?>" title=""><img src="<?php echo base_url(); ?>assets/frontend/data/logo-2016-s.png"></a></figure></div>
+				<div class="e_right pull-right hide_mobile"><a class="e_top_banner e_style_01 pull-right" href="" target="_blank"><figure><img src="<?php echo base_url(); ?>assets/frontend/data/cek-klik-2017.jpg" style="height: 110px"></figure></a></div>
 			</div></div></div>
 			<div class="e_bottom" style="">
 				<div class="e_container clearfix container">
@@ -461,52 +461,52 @@
 										<div class="widget-content clearfix ">
 											<div class="e_slider_pro slider-pro">
 												<div class="sp-slides">
-		<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/aksinasional.jpg?aksinasional">
+		<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/aksinasional.jpg?aksinasional">
 			<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Rangkaian Kegiatan Aksi Nasional Tolak Penyalahgunaan Obat, Jakarta (22/10)</h3>
 		</div>
-		<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/kerjabersama.jpg?kerjabersama">
+		<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/kerjabersama.jpg?kerjabersama">
 			<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Capaian 3 Tahun Pemerintahan Presiden Jokowi dan Wakil Presiden Jusuf Kalla</h3>
 		</div>
-		<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/aksinasional1.jpg?aksinasional1">
+		<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/aksinasional1.jpg?aksinasional1">
 			<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Presiden Jokowi bersama Kepala BPOM membuka Aksi Nasional Pemberantasan Obat Ilegal dan Penyalahgunaan Obat, Jakarta (3/10)</h3>
 		</div>
-		<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/aksi-nasional.jpg?aksi-nasional">
+		<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/aksi-nasional.jpg?aksi-nasional">
 			<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Aksi Nasional Pemberantasan Obat Ilegal dan Penyalahgunaan Obat</h3>
 		</div>
-		<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/hut17.jpeg?hut17">
+		<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/hut17.jpeg?hut17">
 			<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Dirgahayu Republik Indonesia ke-72</h3>
 		</div>
-		<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/press-pcc.jpg?2017">
+		<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/press-pcc.jpg?2017">
 			<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Konferensi Pers Perkembangan Kasus PCC dan Penyalahgunaan Obat</h3>
 		</div>
-	<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/HUT2017.jpg?HUT2017">
+	<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/HUT2017.jpg?HUT2017">
 			<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Dirgahayu Republik Indonesia ke-72, INDONESIA KERJA SAMA</h3>
 		</div>
-	<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/pancasila.jpg?pancasila">
+	<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/pancasila.jpg?pancasila">
 		<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Hari Lahir Pancasila - 1 Juni 2017</h3>
 	</div>
-	<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/penyerahanWTP2017.jpg?penyerahanWTP2017">
+	<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/penyerahanWTP2017.jpg?penyerahanWTP2017">
 		<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Badan POM mendapat predikat Wajar Tanpa Pengecualian (WTP) atas Laporan Keuangan Kementerian/Lembaga tahun 2016, Jakarta - Selasa, 23 Mei 2017</h3>
 	</div>
-	<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/Indonesia-Japan-Joint-Symposium.jpg?Indonesia-Japan-Joint-Symposium">
+	<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/Indonesia-Japan-Joint-Symposium.jpg?Indonesia-Japan-Joint-Symposium">
 		<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Badan POM RI dan Japan Pharmaceutical and Medical Devices Agency (PMDA) bersinergi dalam “The 3rd Indonesia-Japan Joint Symposium, Selasa 16 Mei 2017</h3>
 	</div>
-	<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/kunkerambon2017.jpg?kunkerambon2017">
+	<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/kunkerambon2017.jpg?kunkerambon2017">
 		<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Kunjungan Kerja Badan POM ke Ambon, Ambon - Mei 2017</h3>
 	</div>
-	<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/pu_hut.jpg?pu_hut">
+	<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/pu_hut.jpg?pu_hut">
 		<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">HUT Badan POM ke-16 "Membangun Inovasi dan Kemitraan Mendukung Peningkatan Efektivitas Pengawasan Obat dan Makanan", Jakarta - Februari 2017</h3>
 	</div> 
-	<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/natunaweb2016.jpg?v002">
+	<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/natunaweb2016.jpg?v002">
 		<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Kunjungan Kerja Kepala Badan POM terkait Rencana Pendirian Balai POM, Natuna - 22 Maret 2017</h3>
 	</div>
-	<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/moujaksa.jpg?v003">
+	<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/moujaksa.jpg?v003">
 		<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Sosialisasi Perjanjian Kerjasama Badan POM - Kejaksaan Agung, Jakarta - Maret 2017</h3>
 	</div>
-	<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/munas.jpg?v004">
+	<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/munas.jpg?v004">
 		<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Musyawarah Nasional Pengawasan Obat dan Makanan Tahun 2017, Batu - Maret 2017</h3>
 	</div>
-	<div class="sp-slide" url="<?php echo base_url(); ?>data/slide/pelantikan.jpg?v007">
+	<div class="sp-slide" url="<?php echo base_url(); ?>assets/frontend/data/slide/pelantikan.jpg?v007">
 		<h3 class="sp-layer sp-black" data-horizontal="0" data-vertical="190" data-show-transition="left" data-hide-transition="down" data-show-delay="600" data-hide-delay="100" style="margin-top:13px; font-size: 16px; padding: 10px 20px;">Pelantikan Kepala Badan POM Tahun 2016, Jakarta - Juli 2016</h3>
 	</div>
 </div>											</div>
@@ -526,804 +526,142 @@
 					</div>
 				</div>
 			</section>
-			
-			
-			
-			<section class="e_section  ec_bg_color_body ec_border_top_primary e_relative">
-				<div class="e_container clearfix container" style="margin-top: 10px">
-					<div class="e_col_sub">
-						<div class="widget aegis_widget e_widget_posts_highlight_first_2nd  e_widget ">
-							<header class="e_widget_title e_style_04 "><h3 class="e_title">Hot Issue<span id="addhot" class="red_me" style="float: right; font-size: 31px; cursor: pointer">&raquo;</span><span id="remhot" class="red_me" style="float: right; font-size: 31px; cursor: pointer">&laquo; &nbsp;</span></h3></header>
-							<div id="boxhot" class="row widget-content clearfix" style="margin-top: 5px; height:147px; overflow:hidden;">
-								<div class="col-sm-2 col-xs-12"><article class="e_item e_active"><div class="entry-thumb"><img src="<?php echo base_url(); ?>web/images/demo/pke/pcc.jpg" class="img-responsive wp-post-image" /></div><div class="e_wrap"style="padding: 5px; height: 42px; overflow: hidden"><p class="entry-title" style="line-height: 1.1em; font-size: 14px"><a href="<?php echo base_url(); ?>view/direct/hotissue-pcc">Penyalahgunaan Obat Jenis PCC</a></p></div></article></div>
-<div class="col-sm-2 col-xs-12"><article class="e_item e_active"><div class="entry-thumb"><img src="<?php echo base_url(); ?>web/images/demo/pke/logo_stranas.png" class="img-responsive wp-post-image" /></div><div class="e_wrap"style="padding: 5px; height: 42px; overflow: hidden"><p class="entry-title" style="line-height: 1.1em; font-size: 14px"><a href="<?php echo base_url(); ?>view/direct/hotissue-stranas">Strategi Nasional Perlindungan Konsumen</a></p></div></article></div>
-<div class="col-sm-2 col-xs-12"><article class="e_item e_active"><div class="entry-thumb"><img src="<?php echo base_url(); ?>web/images/demo/pke/logo_obatbaru.jpg" class="img-responsive wp-post-image" /></div><div class="e_wrap"style="padding: 5px; height: 42px; overflow: hidden"><p class="entry-title" style="line-height: 1.1em; font-size: 14px"><a href="<?php echo base_url(); ?>browse/more/issue/16">Update Obat Baru</a></p></div></article></div>
-<!--<div class="col-sm-2 col-xs-12"><article class="e_item e_active"><div class="entry-thumb"><img src="<?php echo base_url(); ?>web/images/demo/pke/whistle2.jpg" class="img-responsive wp-post-image" /></div><div class="e_wrap"style="padding: 5px; height: 42px; overflow: hidden"><p class="entry-title" style="line-height: 1.1em; font-size: 14px"><a href="http://rb.pom.go.id/content/delapan-area-perubahan/penguatan-pengawasan/kirim-pengaduan">Sapu Bersih Pungutan Liar !</a></p></div></article></div>-->
-<div class="col-sm-2 col-xs-12"><article class="e_item e_active"><div class="entry-thumb"><img src="<?php echo base_url(); ?>web/images/demo/pke/logo_pke.jpg" class="img-responsive wp-post-image" /></div><div class="e_wrap"style="padding: 5px; height: 42px; overflow: hidden"><p class="entry-title" style="line-height: 1.1em; font-size: 14px"><a href="<?php echo base_url(); ?>view/direct/pke">Paket Kebijakan Ekonomi</a></p></div></article></div>
-<div class="col-sm-2 col-xs-12"><article class="e_item e_active"><div class="entry-thumb"><img src="<?php echo base_url(); ?>web/images/demo/pke/logo_bpombicara2.png" class="img-responsive wp-post-image" /></div><div class="e_wrap"style="padding: 5px; height: 42px; overflow: hidden"><p class="entry-title" style="line-height: 1.1em; font-size: 14px"><a href="<?php echo base_url(); ?>browse/more/issue/13">BPOM Bicara</a></p></div></article></div>
-<div class="col-sm-2 col-xs-12"><article class="e_item e_active"><div class="entry-thumb"><img src="<?php echo base_url(); ?>web/images/demo/pke/logo_obatpalsu.png" class="img-responsive wp-post-image" /></div><div class="e_wrap"style="padding: 5px; height: 42px; overflow: hidden"><p class="entry-title" style="line-height: 1.1em; font-size: 14px"><a href="<?php echo base_url(); ?>browse/more/issue/12">LAPORKAN !!!</a></p></div></article></div>
-<div class="col-sm-2 col-xs-12"><article class="e_item e_active"><div class="entry-thumb"><img src="<?php echo base_url(); ?>web/images/demo/pke/logo_rekrutmen.png" class="img-responsive wp-post-image" /></div><div class="e_wrap"style="padding: 5px; height: 42px; overflow: hidden"><p class="entry-title" style="line-height: 1.1em; font-size: 14px"><a href="<?php echo base_url(); ?>browse/more/issue/6">Sel. Terbuka Eselon II</a></p></div></article></div>							</div>
-							<script>
-								var showhot = 6;
-								jQuery('#addhot').click(function(){
-									var jml = jQuery('#boxhot').children().length;
-									if(jml>showhot && jml>=showhot){
-										jQuery('#boxhot').children(':visible').first().hide();
-										showhot++;
-									}
-								});
-								jQuery('#remhot').click(function(){
-									var jml = jQuery('#boxhot').children(':hidden').length;
-									if(jml>0){
-										jQuery('#boxhot').children(':hidden').last().show();
-										showhot--;
-									}
-								});
-							</script>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			
-			
-			<section class="e_section">
-				<div class="e_container clearfix container hide_mobile"><div class="e_col_fullwidth"><div class="e_col">
-					<div class="widget aegis_widget e_adv  e_widget_first "><div class="widget-content clearfix " id="urwebreg" style="height:280px">Loading..</div>
-					<script src="<?php echo base_url(); ?>js/amcharts.js?ver=1.3"></script>
-					<script src="<?php echo base_url(); ?>js/amanimate.js?ver=1.1"></script>
-					<script src="<?php echo base_url(); ?>js/serial.js?ver=1.1"></script>
-					<script src="<?php echo base_url(); ?>js/pie.js?ver=1.1"></script>
-					<script src="<?php echo base_url(); ?>js/light.js"></script>
-					<script>
-						jQuery(document).ready(function($){
-							setTimeout(function(){
-								$.get('<?php echo base_url(); ?>front/webreg', function(webreg){
-									if(webreg!='') $('#urwebreg').html(webreg);
-								});
-							}, 1000);
-						});
-					</script>
-					</div>
 					
-				</div></div></div>
-				
-			</section>
-			
-			
-			
-			<section class="e_section  ec_bg_color_body ec_border_top_primary e_relative">
+			<section class="e_section ec_border_top_primary">
 				<div class="e_container clearfix container">
-					<div class="row e_grid_02">
-						<div class="col-lg-8 e_col_main">
-							<div class="e_col">
-								<section class="e_section e_relative">
-									<div class="e_nested clearfix" style="margin-top: 0">
-										<div class="row e_grid_01">
-											<div class="col-lg-6">
-												<div class="e_col">
-													<div class="widget aegis_widget e_widget_posts_highlight_first e_layout_2  e_widget_first ">
-														<header class="e_widget_title e_style_02  ec_title_bg_color_body"><h3 class="e_title" style="">Siaran Pers / Peringatan Publik</h3></header>
-														<div class="widget-content clearfix ">
-															<div class="e_microdata" id="urpers5depan" style="min-height:351px">Loading..</div>
-															<script>
-																jQuery(document).ready(function($){
-																	setTimeout(function(){
-																		$.get('<?php echo base_url(); ?>front/pers5depan', function(pers5depan){
-																			if(pers5depan!='') $('#urpers5depan').html(pers5depan);
-																		});
-																	}, 1500);
-																});
-															</script>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-lg-6">
-												<div class="e_col">
-													<div class="widget aegis_widget e_widget_posts_highlight_first e_layout_2  e_widget_first ">
-														<header class="e_widget_title e_style_02  ec_title_bg_color_body"><h3 class="e_title">Berita Aktual</h3></header>
-														<div class="widget-content clearfix ">
-															<div class="e_microdata" id="urberita5depan" style="min-height:351px">Loading..</div>
-															<script>
-																jQuery(document).ready(function($){
-																	setTimeout(function(){
-																		$.get('<?php echo base_url(); ?>front/berita5depan', function(berita5depan){
-																			if(berita5depan!='') $('#urberita5depan').html(berita5depan);
-																		});
-																	}, 3000);
-																});
-															</script>
-														</div>
-													</div>
-												</div>
-											</div>
+					<div id="e_sub_page" class="row e_row e_style_01">
+						<div class="col-xs-12 e_col_main col-lg-9 col-md-8 col-sm-12 col-xs-12">
+							<section id="e_post_wrap">
+															<p class="e_meta e_line_1"><a href="" class="e_link e_icon e_color_box hvr-sweep-to-right" style="color:#fff"><i class="e_icon fa fa-book"></i>Profil</a></p>
+								<div itemtype="https://schema.org/Blog" itemscope="itemscope" class="e_microdata">
+									<article id="e_post" class="clearfix">
+										<header><h2 style="margin:0;">Fungsi Utama BPOM</h2></header>
+										<div itemprop="text" class="entry-content">
+											<p align="justify">Berdasarakan Pasal 68 Keputusan Presiden Nomor 103 Tahun 2001, BPOM mempunyai fungsi :<br/>
+												<ol>
+												  <li class="same" style="text-align:justify; ">Pengkajian dan penyusunan kebijakan nasional di bidang pengawasan Obat dan Makanan.</li>
+												  <li class="same" style="text-align:justify; ">Pelaksanaan kebijakan tertentu di bidang pengawasan Obat dan Makanan.</li>
+												  <li class="same" style="text-align:justify; ">Koordinasi kegiatan fungsional dalam pelaksanaan tugas BPOM.</li>
+												  <li class="same" style="text-align:justify; ">Pemantauan, pemberian bimbingan dan pembinaan terhadap kegiatan instansi pemerintah di bidang pengawasan Obat dan Makanan.</li>
+												  <li class="same" style="text-align:justify; ">Penyelenggaraan pembinaan dan pelayanan administrasi umum di bindang perencanaan umum, ketatausahaan, organisasi dan tata laksana, kepegawaian, keuangan, kearsipan, persandian, perlengkapan dan rumah tangga.</li>
+												</ol>
+											</p><br>&nbsp;
+										</div>
+										<header><h2 style="margin:0;">Fungsi Balai Besar/Balai POM (Unit Pelaksana Teknis)</h2></header>
+										<div itemprop="text" class="entry-content">
+											<p align="justify">Berdasarkan Pasal 3 Peraturan Kepala BPOM Nomor 14 Tahun 2014, Unit Pelaksana Teknis di lingkungan BPOM mempunyai fungsi :<br/>
+												<ol>
+												  <li class="same" style="text-align:justify; ">Penyusunan rencana dan program pengawasan obat dan makanan.</li>
+												  <li class="same" style="text-align:justify; ">Pelaksanaan pemeriksaan secara laboratorium, pengujian dan penilaian mutu produk terapetik, narkotika, psikotropika zat adiktif, obat tradisional, kosmetik, produk komplemen, pangan dan bahan berbahaya.</li>
+												  <li class="same" style="text-align:justify; ">Pelaksanaan pemeriksaanlaboratorium, pengujian dan penilaian mutu produk secara mikrobiologi.</li>
+												  <li class="same" style="text-align:justify; ">Pelaksanaan pemeriksaan setempat, pengambilan contoh dan pemeriksaan sarana produksi dan distribusi</li>
+												  <li class="same" style="text-align:justify; ">Investigasi dan penyidikan pada kasus pelanggaran hukum.</li>
+												  <li class="same" style="text-align:justify; ">Pelaksanaan sertifikasi produk, sarana produksi dan distribusi tertentu yang ditetapkan oleh Kepala Badan Pengawas Obat dan Makanan</li>
+												  <li class="same" style="text-align:justify; ">Pelaksanaan kegiatan layanan informasi konsumen.</li>
+												  <li class="same" style="text-align:justify; ">Evaluasi dan penyusunan laporan pengujian obat dan makanan.</li>
+												  <li class="same" style="text-align:justify; ">Pelaksanaan urusan tata usaha dan kerumahtanggaan.</li>
+												  <li class="same" style="text-align:justify; ">Pelaksanaan tugas lain yang ditetapkan oleh Kepala BadanPengawas Obatdan Makanan, sesuai dengan bidang tugasnya.</li>
+												</ol>
+											</p>
+																				<br>&nbsp;
+										</div>
+									</article>
+								</div>
+								
+								<aside class="e_aside e_padding">
+									<div class="widget e_widget_share_buttons e_style_01">
+										<div class="widget-content clearfix">
+											<a href="http://www.facebook.com/sharer.php?u=http://www.pom.go.id/new/view/direct/function" target="_blank" rel="nofollow" class="e_link e_icon e_facebook"><i class="e_icon fa fa-facebook"></i></a>
+											<a href="https://twitter.com/share?url=http://www.pom.go.id/new/view/direct/function" target="_blank" rel="nofollow"  class="e_link e_icon e_twitter"><i class="e_icon fa fa-twitter"></i></a>
+											<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());" rel="nofollow"  class="e_link e_icon e_pinterest"><i class="e_icon fa fa-pinterest"></i></a>
+											<a href="https://plus.google.com/share?url=http://www.pom.go.id/new/view/direct/function" target="_blank" rel="nofollow"  class="e_link e_icon e_google-plus"><i class="e_icon fa fa-google-plus"></i></a>
 										</div>
 									</div>
-									<img src="<?php echo base_url(); ?>data/images/maklumat-pelayanan-tdd.jpg" style="width:100%">
-									<div class="e_nested clearfix" style="margin-top:20px">
-										<div class="row e_grid_01">
-											<div class="col-lg-12">
-												<div class="e_col">
-													<div class="widget aegis_widget e_widget_posts_highlight_first e_layout_2  e_widget_first ">
-														<header class="e_widget_title e_style_02  ec_title_bg_color_body"><h3 class="e_title" style="color: #1977a5">Pengumuman</h3></header>
-														<div class="widget-content clearfix ">
-															<div class="e_microdata" id="urpengumuman" style="min-height:237px">Loading..</div>
-															<script>
-																jQuery(document).ready(function($){
-																	setTimeout(function(){
-																		$.get('<?php echo base_url(); ?>front/pengumuman5depan', function(pengumuman){
-																			if(pengumuman!='') $('#urpengumuman').html(pengumuman);
-																		});
-																	}, 2000);
-																});
-															</script>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="e_nested clearfix">
-										<div class="row e_grid_01">
-											<div class="col-lg-6">
-												<div class="e_col">
-													<div class="widget aegis_widget e_widget_posts_highlight_first e_layout_2  e_widget_first ">
-														<header class="e_widget_title e_style_02  ec_title_bg_color_body"><h3 class="e_title">Pengadaan Barang &amp; Jasa</h3></header>
-														<div class="widget-content clearfix ">
-															<div class="e_microdata" id="urpengadaan5depan" style="min-height:530px">Loading..</div>
-															<script>
-																jQuery(document).ready(function($){
-																	setTimeout(function(){
-																		$.get('<?php echo base_url(); ?>front/pengadaan5depan', function(pengadaan5depan){
-																			if(pengadaan5depan!='') $('#urpengadaan5depan').html(pengadaan5depan);
-																		});
-																	}, 4500);
-																});
-															</script>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-lg-6 hidden-md hidden-sm hidden-xs">
-												<div class="e_col">
-													<div class="widget aegis_widget e_widget_posts_highlight_first e_layout_2  e_widget_first ">
-														<header class="e_widget_title e_style_02  ec_title_bg_color_body"><h3 class="e_title">Aplikasi Publik</h3></header>
-														<div style="position:absolute; margin: 85px 0 0 -180px; width: 200px; display: none" id="ereg-group">
-															<a href="http://aero.pom.go.id"><img src="<?php echo base_url(); ?>data/banner/ereg-obat.jpg" style="margin: 0 4px 8px 0; border: 1px solid #512db8;" height="75" width="172"></a>
-															<a href="http://asrot.pom.go.id"><img src="<?php echo base_url(); ?>data/banner/asrot.jpg" style="margin: 0 4px 8px 0; border: 1px solid #508e33;" height="75" width="172"></a>
-															<a href="http://e-reg.pom.go.id"><img src="<?php echo base_url(); ?>data/banner/ereg-pangan.jpg" style="margin: 0 4px 8px 0; border: 1px solid #1977a5;" height="75" width="172"></a>
-														</div>
-														<div class="widget-content clearfix " style="position:absolute">
-															<a href="http://lpse.pom.go.id"><img src="<?php echo base_url(); ?>data/banner/lpse.jpg" style="margin: 0 4px 8px 0; border: 1px solid #d7d5cb;" height="64" width="172"/></a>
-															<a href="http://e-bpom.pom.go.id"><img src="<?php echo base_url(); ?>data/banner/ebpom.jpg" style="margin: 0 4px 8px 0; border: 1px solid #1977a5;" height="64" width="172"></a>
-															<a href="javascript:void(0)" onclick="jQuery('#ereg-group').toggle();"><img height="64" width="172" src="<?php echo base_url(); ?>data/banner/ereg.jpg" style="margin: 0 4px 8px 0; border: 1px solid #508e33;"></a>
-															<a href="http://notifkos.pom.go.id"><img src="<?php echo base_url(); ?>data/banner/notifikasi.jpg" style="margin: 0 4px 8px 0; border: 1px solid #9b3322;" height="64" width="172"></a>
-															<a href="http://e-pengujian.pom.go.id"><img src="<?php echo base_url(); ?>data/banner/epengujian.jpg" style="margin: 0 4px 8px 0; border: 1px solid #1977a5;" height="64" width="172"></a>
-															<a href="http://www.pom.go.id/ppid"><img src="<?php echo base_url(); ?>data/banner/ppid.jpg" style="margin: 0 4px 8px 0; border: 1px solid #7ebff1;" height="64" width="172"></a>
-															<a href="http://rb.pom.go.id/"><img src="<?php echo base_url(); ?>data/banner/rb.jpg" style="margin: 0 4px 8px 0; border: 1px solid #b9d240;" height="64" width="172"></a>
-															<a href="<?php echo base_url(); ?>view/direct/antrian_obat"><img src="<?php echo base_url(); ?>data/banner/antrian-obat.jpg" style="margin: 0 4px 8px 0; border: 1px solid #8c5105;" height="64" width="172"></a>
-															<a href="http://www.pom.go.id/penyidikan"><img src="<?php echo base_url(); ?>data/banner/penyidikan.jpg" style="margin: 0 4px 8px 0; border: 1px solid #1977a5;width:172px; height:64px;"></a>
-															<a href="http://qms.pom.go.id"><img src="<?php echo base_url(); ?>data/banner/qms.jpg" style="margin: 0 4px 8px 0; border: 1px solid #d76be0;" height="64" width="172"></a>
-															<a href="http://rb.pom.go.id/content/delapan-area-perubahan/penguatan-pengawasan/kirim-pengaduan"><img src="<?php echo base_url(); ?>data/banner/wbs.jpg" style="margin: 0 4px 8px 0; border: 1px solid #8c5105;width:172px; height:64px;"></a>
-															<a href="http://klubpompi.pom.go.id/id/"><img src="<?php echo base_url(); ?>data/banner/klubpompi2014.gif" style="margin: 0 4px 8px 0; width:172px; height:64px;"></a>
-															<a href="http://www.lapor.go.id/"><img src="<?php echo base_url(); ?>data/banner/lapor-logo.png" style="margin: 0 4px 8px 0; border: 1px solid #FFF;width:172px; height:64px;"></a>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</section>
-							</div>
+								</aside>
+							</section>
 						</div>
-						<div class="col-lg-4 e_col_sub">
-							<div class="e_col">
-								<div id="aegis_widget_fltgq0fdzx" class="widget aegis_widget e_widget_socials_counter  e_widget_first " style="height:200px; overflow: hidden">
-									<header class="e_widget_title e_style_04 " id="esl">
-										<h3 class="e_title jdlfoto selfoto"><a href="<?php echo base_url(); ?>view/direct/head">Kepala Badan POM</a></h3>
-										<h3 class="e_title jdlfoto" style="display:none;"><a href="<?php echo base_url(); ?>view/direct/secretary">Sekretaris Utama</a></h3>
-										<h3 class="e_title jdlfoto" style="display:none;"><a href="<?php echo base_url(); ?>view/direct/deputy1">Deputi I</a></h3>
-										<h3 class="e_title jdlfoto" style="display:none;"><a href="<?php echo base_url(); ?>view/direct/deputy2">Deputi II</a></h3>
-										<h3 class="e_title jdlfoto"  style="display:none;"><a href="<?php echo base_url(); ?>view/direct/deputy3">Deputi III</a></h3>
-									</header>
-									<div id="esl_isi">
-										<div class="jdlfoto selfoto"><a href="<?php echo base_url(); ?>view/direct/head"><img height="150px" align="left" style="padding:0 20px 5px 0" src="<?php echo base_url(); ?>web/images/esl1/kabpom2016.jpg"></a><p><b><a href="<?php echo base_url(); ?>view/direct/head">Kepala Badan POM</a></b><small><br>&nbspDr. Ir. Penny K. Lukito, MCP</small></p><br/><br/></div>
-										<div class="jdlfoto" style="display:none;"><a href="<?php echo base_url(); ?>view/direct/secretary"><img height="150px" align="left" style="padding:0 20px 5px 0" src="<?php echo base_url(); ?>web/images/esl1/sestama2017.jpg"></a><p><b><a href="<?php echo base_url(); ?>view/direct/secretary">Sekretaris Utama Badan POM</a></b><small><br>&nbsp;Dra. Reri Indriani, Apt., M.Si. <br>&nbsp;<br>&nbsp;</small></p><br/></div>
-										<div class="jdlfoto" style="display:none;"><a href="<?php echo base_url(); ?>view/direct/deputy1"><img height="150px" align="left" style="padding:0 20px 5px 0" src="<?php echo base_url(); ?>web/images/esl1/dep1_2017.jpg"></a><p><b><a href="<?php echo base_url(); ?>view/direct/deputy1">Deputi Bidang Pengawasan Produk Terapetik dan Narkotika, Psikotropika & Zat Adiktif</a></b><small><br>&nbsp; Dra. Nurma Hidayati, Apt., M.Epid.<br>&nbsp;<br>&nbsp;</small></p><br/></div>
-										<div class="jdlfoto" style="display:none;"><a href="<?php echo base_url(); ?>view/direct/deputy2"><img height="150px" align="left" style="padding:0 20px 5px 0" src="<?php echo base_url(); ?>web/images/esl1/dep2_2015pakondri.jpg"></a><p><b><a href="<?php echo base_url(); ?>view/direct/deputy2">Deputi Bidang Pengawasan Obat Tradisional, Kosmetik dan Produk Komplemen</a></b><small><br>&nbsp;Drs. Ondri Dwi Sampurno, M.Si., Apt.</small></p><br/></div>
-										<div class="jdlfoto" last="" style="display:none;"><a href="<?php echo base_url(); ?>view/direct/deputy3"><img height="150px" align="left" style="padding:0 20px 5px 0" src="<?php echo base_url(); ?>web/images/esl1/dep32014_2.JPG"></a><p><b><a href="<?php echo base_url(); ?>view/direct/deputy3">Deputi Bidang Pengawasan Keamanan Pangan dan Bahan Berbahaya</a></b><small><br>&nbsp;Drs. Suratmono, MP</small></p><br/></div>
-									</div>
-									<script>
-										jQuery(document).ready(function($){
-											$('.selfoto').show();
-											setInterval(function(){
-												var active = $('h3.selfoto');
-												var actives = $('div.selfoto');
-												var next = active.next();
-												if(actives.attr('last')=='') 
-													var nexts = $('div.jdlfoto').first();
-												else
-													var nexts = actives.next();
-												if(next.html()==null) next = $('h3.jdlfoto').first();
-												next.addClass('selfoto');
-												nexts.addClass('selfoto');
-												active.removeClass('selfoto');
-												actives.removeClass('selfoto');
-												active.hide();
-												actives.hide();
-												next.show();
-												nexts.fadeIn(1200);
-											}, 5000);
-										});
-									</script>
-								</div>
-								<div class="widget aegis_widget e_widget_posts_highlight_first_2nd  e_widget ">
-									<header class="e_widget_title e_style_04 "><h3 class="e_title"><a href="<?php echo base_url(); ?>browse/more/klarifikasi" class="red_me">Klarifikasi Badan POM</a>&nbsp;&nbsp;<img src="<?php echo base_url(); ?>data/new1.gif" /></h3></header>
-									<div class="widget-content clearfix">
-										<div class="e_microdata">
-											<div class="row">
-											<div class="col-xs-12 e_right" id="urklarifikasi5depan" style="min-height:522px">Loading..
-												<script>
-													jQuery(document).ready(function($){
-														setTimeout(function(){
-															$.get('<?php echo base_url(); ?>front/klarifikasi5depan', function(klarifikasi5depan){
-																if(klarifikasi5depan!=''){
-																	$('#urklarifikasi5depan').html(klarifikasi5depan);
-																	setInterval("rollklar()", 6000);
-																}
-															});
-														}, 1500);
-													});
-													function rollklar(){
-														var klarshow = jQuery('article.klarshow:visible');
-														klarshow = klarshow.first();
-														var showfirst = parseInt(klarshow.attr('klar'));
-														showfirst = showfirst + 7;
-														var hidefirst = jQuery("article.klarshow[name^='x"+showfirst+"done']");
-														klarshow.slideUp("slow");
-														hidefirst.slideDown("slow");
-													}
-												</script>
-											</div></div>
-										</div>
-									</div>
-								</div>
-								<div class="widget aegis_widget widget_categories  e_widget " style="margin-top: 55px" >
-									<header class="e_widget_title e_style_04 "><h3 class="e_title">Link Terkait</h3></header>
-									<div class="widget-content clearfix ">
-									<ul>
-										<li class="cat-item"><a href="http://www.depkes.go.id/" target="_blank">Kementerian Kesehatan &nbsp;<small>- <i class="blue_me">www.kemkes.go.id</i></small></a></li>
-										<li class="cat-item"><a href="http://www.bnn.go.id/" target="_blank">Badan Narkotika Nasional &nbsp;<small>- <i class="blue_me">www.bnn.go.id</i></small></a></li>
-										<li class="cat-item"><a href="http://www.kpk.go.id/" target="_blank">Komisi Pemberantasan Korupsi &nbsp;<small>- <i class="blue_me">www.kpk.go.id</i></small></a></li>
-										<li class="cat-item"><a href="http://www.insw.go.id/" target="_blank">Portal INSW &nbsp;<small>- <i class="blue_me">www.insw.go.id</i></small></a></li>
-										<li class="cat-item"><a href="http://www.bkpm.go.id/" target="_blank">BKPM &nbsp;<small>- <i class="blue_me">www.bkpm.go.id</i></small></a></li>
-										<li class="cat-item"><a href="http://www.who.int/" target="_blank">World Health Organization &nbsp;<small>- <i class="blue_me">www.who.int</i></small></a></li>
-										<li class="cat-item"><a href="http://www.who.int/" target="_blank">Food and Drug Administration &nbsp;<small>- <i class="blue_me">www.fda.gov</i></small></a></li>
-									</ul>
-									</div>
-								</div>
-								<div class="widget aegis_widget e_widget_posts_highlight_first_2nd  e_widget " style="margin-top: 42px">
-									<header class="e_widget_title e_style_04 "><h3 class="e_title">Laporan</h3></header>
-									<div class="widget-content clearfix ">
-										<div class="textwidget">
-											<div class="e_toggles e_style_01 e_accordions">
-												
-												<div class="e_toggle e_active">
-													<div class="e_toggle_title clearfix"><i class="e_icon fa fa-line-chart"></i>Laporan Kinerja<span class="e_action pull-right">-</span></div>
-													<div style="display: block;" class="e_toggle_content">
-														<a href="<?php echo base_url(); ?>browse/more/lapkin" class="e_button e_icon e_solid e_style_01">2014</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/lapkin" class="e_button e_icon e_solid e_style_01">2015</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/lapkin" class="e_button e_icon e_solid e_style_01">2016</a>
-													</div>
-												</div>
-												<div class="e_toggle">
-													<div class="e_toggle_title clearfix"><i class="e_icon fa fa-line-chart"></i>LAKIP<span class="e_action pull-right">+</span></div>
-													<div style="display: none;" class="e_toggle_content">
-														<a href="<?php echo base_url(); ?>browse/more/lakip" class="e_button e_icon e_solid e_style_01">2011</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/lakip" class="e_button e_icon e_solid e_style_01">2012</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/lakip" class="e_button e_icon e_solid e_style_01">2013</a>
-													</div>
-												</div>
-												<div class="e_toggle">
-													<div class="e_toggle_title clearfix"><i class="e_icon fa fa-area-chart"></i>Laporan Tahunan<span class="e_action pull-right">+</span></div>
-													<div style="display: none;" class="e_toggle_content">
-														<a href="<?php echo base_url(); ?>browse/more/laporan_tahunan" class="e_button e_icon e_solid e_style_01">2012</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/laporan_tahunan" class="e_button e_icon e_solid e_style_01">2013</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/laporan_tahunan" class="e_button e_icon e_solid e_style_01">2014</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/laporan_tahunan" class="e_button e_icon e_solid e_style_01">2015</a>
-													</div>
-												</div>
-												<div class="e_toggle">
-													<div class="e_toggle_title clearfix"><i class="e_icon fa fa-area-chart"></i>Laporan Keuangan<span class="e_action pull-right">+</span></div>
-													<div style="display: none;" class="e_toggle_content">
-														<a href="<?php echo base_url(); ?>browse/more/laporan_keuangan" class="e_button e_icon e_solid e_style_01">2012</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/laporan_keuangan" class="e_button e_icon e_solid e_style_01">2013</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/laporan_keuangan" class="e_button e_icon e_solid e_style_01">2014</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/laporan_keuangan" class="e_button e_icon e_solid e_style_01">2015</a>
-														&nbsp;<a href="http://www.pom.go.id/ppid/2016/kelengkapan/keuangan2016.pdf" class="e_button e_icon e_solid e_style_01">2016</a>
-													</div>
-												</div>
-												<div class="e_toggle">
-													<div class="e_toggle_title clearfix"><i class="e_icon fa fa-bar-chart"></i>Laporan Barang Milik Negara<span class="e_action pull-right">+</span></div>
-													<div style="display: none;" class="e_toggle_content">
-														<a href="<?php echo base_url(); ?>view/direct/lap_bmn-2014" class="e_button e_icon e_solid e_style_01">2014</a>
-														<a href="<?php echo base_url(); ?>view/direct/lap_bmn-2015" class="e_button e_icon e_solid e_style_01">2015</a>
-														<a href="http://www.pom.go.id/ppid/rar/lap_bmn_2016.pdf" class="e_button e_icon e_solid e_style_01">2016</a>
-													</div>
-												</div>
-												<div class="e_toggle">
-													<div class="e_toggle_title clearfix"><i class="e_icon fa fa-bar-chart"></i>Report To The Nation<span class="e_action pull-right">+</span></div>
-													<div style="display: none;" class="e_toggle_content">
-														<a href="<?php echo base_url(); ?>browse/more/lap_to_nation/01-01-2013/01-12-2013" class="e_button e_icon e_solid e_style_01">2013</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/lap_to_nation/01-01-2014/01-12-2014" class="e_button e_icon e_solid e_style_01">2014</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/lap_to_nation/01-01-2015/01-12-2015" class="e_button e_icon e_solid e_style_01">2015</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/lap_to_nation/01-01-2016/01-12-2016" class="e_button e_icon e_solid e_style_01">2016</a>
-														&nbsp;<a href="<?php echo base_url(); ?>browse/more/lap_to_nation/01-01-2017/01-12-2017" class="e_button e_icon e_solid e_style_01">2017</a>
-													</div>
-												</div>
-												<div class="e_toggle">
-													<div class="e_toggle_title clearfix"><i class="e_icon fa fa-area-chart"></i>Laporan PNBP<span class="e_action pull-right">+</span></div>
-													<div style="display: none;" class="e_toggle_content">
-														<a href="<?php echo base_url(); ?>view/direct/lap_pnbp" class="e_button e_icon e_solid e_style_01">2014</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			
-			
-			<section id="aegis_row_jakom4p4f2" class="e_section  e_relative">
-				<div class="e_owl_icon e_left"><i class="e_icon fa fa-angle-left"></i></div>
-				<div class="e_owl_icon e_right"><i class="e_icon fa fa-angle-right"></i></div>
-				<div id="aegis_row_jakom4p4f2-parallax" class="e_parallax clearfix ">
-					<div class="e_parallax_inner clearfix">
-						<div class="e_overlay"></div>
-						<div id="aegis_row_jakom4p4f2-inner" class="e_container clearfix container " style="margin-top: 15px; margin-bottom: 25px;">
-							<div id="aegis_col_pwoo0s3tyl9" class="e_col_fullwidth">
-								<div class="e_col">
-									<div id="aegis_widget_9mjj4p2p5zf" class="widget aegis_widget e_widget_posts_carousel_large_thumb  e_widget_first ">
-										<header class="e_widget_title e_style_03  ec_title_color_white ec_bg_color_none ec_title_middle_line_color_primary"><h3 class="e_title">Foto dan Video Kegiatan</h3></header>
-										<div class="widget-content clearfix ">
-											<div class="e_container clearfix">
-												<div class="row">
-													<div itemscope itemtype="http://schema.org/LiveBlogPosting" class="owl-carousel owl-theme e_owl_pagination_1">
-														<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/inovasiPTSP.jpg" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" 
-		caption="
-			<b><font size=5px>
-				Badan POM Terima Penghargaan atas Inovasi Pelayanan Terpadu Satu Pintu Ekpor- Impor Obat dan Makanan
-			</font></b>
-			<br/><br/>
-			<p align=justify>
-				Sekretaris Utama Badan POM, Reri Indriani menerima penghargaan atas Inovasi Pelayanan Publik Badan POM dalam bentuk Pelayanan Terpadu Satu Pintu (PTSP) Ekspor-Impor Obat dan Makanan pada Pameran Inovasi Lembaga Administrasi Negara, 3 - 4 Agustus 2017.			
-			</p>
-		">
-	Badan POM Terima Penghargaan atas Inovasi Pelayanan Terpadu Satu Pintu Ekpor- Impor Obat dan Makanan</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;">
-		<a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i>
-			<span class="e_text">
-				Jakarta
-			</span>
-		</a>
-		<a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right">
-			<i class="e_icon fa fa-calendar"></i>
-			<span class="e_text">
-				Agu 2017
-			</span>
-		</a>
-	</p>
-</article>
-
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/fk_merauke.jpg" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" 
-		caption="
-			<b><font size=5px>
-				Tanamkan Kesadaran Pangan Sehat dan Bergizi siswa SD YPPK St. Theresia Buti
-			</font></b>
-			<br/><br/>
-			<p align=justify>
-				Kepala Badan POM, Penny K. Lukito hadir langsung di tengah-tengah para siswa SD YPPK St. Theresia Buti yang merupakan salah satu sekolah katolik di Merauke dan SD Yapis II yang merupakan salah satu sekolah Islam di Merauke, untuk berdialog langsung sekaligus meningkatkan edukasi para siswa tentang makanan sehat.			
-			</p>
-		">
-	Tanamkan Kesadaran Pangan Sehat dan Bergizi siswa SD YPPK St. Theresia Buti</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;">
-		<a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i>
-			<span class="e_text">
-				Jakarta
-			</span>
-		</a>
-		<a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right">
-			<i class="e_icon fa fa-calendar"></i>
-			<span class="e_text">
-				Jul 2016
-			</span>
-		</a>
-	</p>
-</article>
-
-
-
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/RI_1_TJ_(4)1.JPG" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" caption="<b><font size=5px>Indonesia Kirim Bantuan Kemanusiaan untuk Muslim Rohingya</font></b><br/><br/><p align=justify>Sekretaris Utama Badan POM, Reri Indriani menghadiri pengiriman bantuan kemanusiaan untuk Rakhine State, Komunitas Muslim Rohingya di Myanmar. Kegiatan dipimpin langsung oleh Presiden RI, Joko Widodo yang secara simbolis melepas bantuan kemanusiaan tersebut. Bantuan kemanusiaan ini dikirim melalui Dermaga III Pelabuhan Tanjung Priok Jakarta Utara.</p>">Bantuan Kemanusiaan Rohingya</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;"><a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i><span class="e_text">Jakarta</span></a><a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right"><i class="e_icon fa fa-calendar"></i><span class="e_text">Des 2016</span></a></p>
-</article>
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/fk_100hk.jpg" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" 
-		caption="
-			<b><font size=5px>
-				Refleksi 100 Hari Kerja Kepala Badan POM
-			</font></b>
-			<br/><br/>
-			<p align=justify>
-				100 hari kerja, Penny K. Lukito menjalankan tugas sebagai Kepala Badan POM, sejak dilantik secara langsung oleh Presiden Joko Widodo pada 20 Juli 2016 lalu. Berbagai strategi penguatan telah  diprioritaskan Penny untuk membawa Badan POM menjadi lembaga pengawas Obat dan Makanan yang mandiri. Walaupun demikian banyak tantangan selama menjalankan tugas tersebut.			
-			</p>
-		">
-	Refleksi 100 Hari Kerja Kepala Badan POM</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;">
-		<a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i>
-			<span class="e_text">
-				Jakarta
-			</span>
-		</a>
-		<a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right">
-			<i class="e_icon fa fa-calendar"></i>
-			<span class="e_text">
-				Des 2016
-			</span>
-		</a>
-	</p>
-</article>
-
-
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/fk_bpomombudsman.jpg" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" caption="<b><font size=5px>Badan POM Memperoleh Penghargaan Predikat Pelayanan Publik dengan Kepatuhan Tinggi </font></b><br/><br/><p align=justify>Badan POM memperoleh penghargaan predikat pelayanan publik dengan kepatuhan tinggi dari OMBUDSMAN RI yang diserahkan oleh Prof. Amzulian Rifai, S.H., LLM., PH.D (Ketua OMBUDSMAN RI) Kepada Dra. Rita Endang, Apt., M.Kes (Kepala Pusat Informasi Obat dan Makanan - BPOM).</p>">Predikat dengan Kepatuhan Tinggi</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;"><a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i><span class="e_text">Jakarta</span></a><a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right"><i class="e_icon fa fa-calendar"></i><span class="e_text">Nov 2016</span></a></p>
-</article>
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/fk_rakernas_IAI.jpg" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" 
-		caption="
-			<b><font size=5px>
-				Badan POM Dukung Praktik Kefarmasian yang Bertanggung Jawab
-			</font></b>
-			<br/><br/>
-			<p align=justify>
-				Rapat Kerja Nasional (Rakernas) dan Pertemuan Ilmiah Tahunan (PIT) 2016 diselenggarakan oleh Ikatan Apoteker Indonesia (IAI) pada 27-30 September 2016 di Yogyakarta dengan mengusung tema Rakernas Developing Pharmacist Role for Better Quality of Life in Asean Economic Comunity Era. Berbagai ide baru yang dihasilkan dalam rakernas harus diimplementasikan secara nyata oleh berbagai pihak dan lintas sektor terkait sebagai upaya meningkatkan peran dan eksistensi Apoteker Indonesia dalam Sistem Jaminan Kesehatan Nasional ke depan.			
-			</p>
-		">
-	Rakernas dan Pertemuan Ilmiah Tahunan</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;"><a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i><span class="e_text">Yogyakarta</span></a><a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right"><i class="e_icon fa fa-calendar"></i><span class="e_text">Sep 2016</span></a></p>
-</article>
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/fk_19092016.JPG" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" caption="<b><font size=5px>Rapat Koordinasi Pengawasan Peredaran Obat Ilegal </font></b><br/><br/><p align=justify>Rapat Koordinasi Bersama Menko. PMK, Kepala Badan POM, Menteri Kesehatan,Kabareskrim, Sekjen IAI terkait Peredaran Obat Ilegal Termasuk Palsu yang Meresahkan Masyarakat</p>">Rapat Koordinasi Pengawasan Peredaran Obat Ilegal</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;"><a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i><span class="e_text">Jakarta</span></a><a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right"><i class="e_icon fa fa-calendar"></i><span class="e_text">Sep 2016</span></a></p>
-</article>
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/fk_bebiluck.JPG" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" 
-		caption="
-			<b><font size=5px>
-				Penarikan Makanan Bayi Pendamping ASI Ilegal
-			</font></b>
-			<br/><br/>
-			<p align=justify>
-				Badan POM kembali hadir melindungi masyarakat dari Obat dan Makanan yang membahayakan kesehatan. Kamis (15/09) Badan POM bersama lintas sektor terkait berhasil menyegel pabrik Makanan Pendamping ASI (MP-ASI) ilegal BEBILUCK milik PT. Hassana Boga Sejahtera di Kawasan Pergudangan Multiguna Taman Tekno 2 Blok L2 no.35 BSD Tangerang Selatan. Dari lokasi berhasil diamankan produk jadi sejumlah 16.884 pcs dan kemasan sejumlah 217.280 pcs dengan total nilai barang bukti mencapai Rp733.000.000 (tujuh ratus tiga puluh tiga juta rupiah).			
-			</p>
-		">
-	Penarikan Makanan Bayi Pendamping ASI Ilegal</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;"><a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i><span class="e_text">Tangerang</span></a><a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right"><i class="e_icon fa fa-calendar"></i><span class="e_text">Sep 2016</span></a></p>
-</article>
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/fk_bpkbpom2016.jpg" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" 
-		caption="
-			<b><font size=5px>
-				Audiensi dengan Anggota VI dan Tim Auditor
-			</font></b>
-			<br/><br/>
-			<p align=justify>
-				Kepala Badan POM, Penny K Lukito beserta jajarannya melakukan audiensi dengan Anggota VI dan Tim Auditor di kantor BPK Jakarta 
-			</p>
-		">
-	Audiensi dengan Anggota VI dan Tim Auditor</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;"><a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i><span class="e_text">Jakarta</span></a><a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right"><i class="e_icon fa fa-calendar"></i><span class="e_text">Sep 2016</span></a></p>
-</article>
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/fk_bio.jpg" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" 
-		caption="
-			<b><font size=5px>
-				Kunjungan Kerja Ke Pabrik Bio Farma
-			</font></b>
-			<br/><br/>
-			<p align=justify>
-				Kepala BPOM, Penny K. Lukito yang didampingi Deputi Bidang Pengawasan Produk Terapetik dan NAPZA, T. Bahdar J. Hamid beserta jajaran melakukan kunjungan kerja ke pabrik Bio Farma. Kunjungan tersebut bertujuan untuk mengetahui dan memastikan bahwa vaksin yang diproduksi oleh pabrik Bio Farma aman, berkhasiat, dan bermutu sesuai dengan standar dan persyaratan yang berlaku nasional dan internasional.				
-			</p>
-		">
-	Kunjungan Kerja Ke Pabrik Bio Farma</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;"><a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i><span class="e_text">Bandung</span></a><a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right"><i class="e_icon fa fa-calendar"></i><span class="e_text">Agu 2016</span></a></p>
-</article>
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/fk_ppomn2.jpg" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" 
-		caption="
-			<b><font size=5px>
-				Peninjauan Proses Uji Vaksin
-			</font></b>
-			<br/><br/>
-			<p align=justify>
-				Kepala Badan POM, Penny Kusumastuti Lukito mengunjungi gedung Pusat Pengujian Obat dan Makanan Nasional (PPOMN) dalam rangka meninjau proses uji vaksin. Dimana BPOM merupakan NRA (National Regulatory Authority) yang mengawasi industri farmasi penyedia vaksin, dan tergabung dalam satgas penaggulangan vaksin palsu.			
-			</p>
-		">
-	Peninjauan Proses Uji Vaksin</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;">
-		<a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i>
-			<span class="e_text">
-				Jakarta
-			</span>
-		</a>
-		<a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right">
-			<i class="e_icon fa fa-calendar"></i>
-			<span class="e_text">
-				Agu 2016
-			</span>
-		</a>
-	</p>
-</article>
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/fk_rs.jpg" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" 
-		caption="
-			<b><font size=5px>
-				Kunjungan Kerja Ke RS Harapan Bunda
-			</font></b>
-			<br/><br/>
-			<p align=justify>
-				Kepala Badan POM, Penny K Lukito yang didampingi Deputi Bidang Pengawasan Produk Terapetik dan NAPZA, T. Bahdar J. Hamid beserta jajaran melakukan kunjungan kerja ke RS Harapan Bunda bersama Panitia Kerja (Panja) Pengawasan Peredaran Vaksin dan Obat Komisi IX DPR-RI, yang langsung dipimpin oleh Dede Yusuf selaku Ketua Panita Kerja			
-			</p>
-		">
-	Kunjungan Kerja Ke RS Harapan Bunda</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;"><a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i><span class="e_text">Jakarta</span></a><a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right"><i class="e_icon fa fa-calendar"></i><span class="e_text">Jul 2016</span></a></p>
-</article>
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/fk_yanlik.jpg" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="javascript:void(0)" 
-		caption="
-			<b><font size=5px>
-				Kepala Badan POM Penny K. Lukito meninjau kesiapan pelayanan publik
-			</font></b>
-			<br/><br/>
-			<p align=justify>
-				Kepala Badan POM Penny K. Lukito meninjau kesiapan pelayanan publik dalam melayani registrasi obat dan makanan di Badan POM			
-			</p>
-		">
-	Kepala Badan POM Penny K. Lukito meninjau kesiapan pelayanan publik</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;">
-		<a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i>
-			<span class="e_text">
-				Jakarta
-			</span>
-		</a>
-		<a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right">
-			<i class="e_icon fa fa-calendar"></i>
-			<span class="e_text">
-				Jul 2016
-			</span>
-		</a>
-	</p>
-</article>
-<article class="e_item clearfix post type-post">
-	<div class="entry-thumb">
-		<img src="<?php echo base_url(); ?>data/foto_kegiatan/ulpk.jpg" class="img-responsive wp-post-image" itemprop="image" />
-		<h4 itemprop="headline" class="entry-title"></h4>
-	</div>
-	<p class="e_meta" style="background-color: rgba(25, 153, 73, 0.8); height: 47px !important; overflow: hidden; line-height: 1.2em"><a class="fotoact" href="<?php echo base_url(); ?>view/direct/video" 
-		caption="
-			<b><font size=5px>
-				Video
-			</font></b>
-			<br/><br/>
-			<p align=justify>
-				Redirect to video...
-			</p>
-		">
-	Video</a></p>
-	<p class="e_meta" style="padding-left: 0;padding-right: 0;">
-		<a href="javascript:void(0)" class="e_link e_icon e_date e_solid"><i class="e_icon fa fa-map-marker"></i>
-			<span class="e_text">
-				Jakarta
-			</span>
-		</a>
-		<a href="javascript:void(0)" class="e_link e_icon e_date e_solid" style="float:right">
-			<i class="e_icon fa fa-calendar"></i>
-			<span class="e_text">
-				Jul 2016
-			</span>
-		</a>
-	</p>
-</article>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<script>
-					jQuery('.fotoact').click(function(){
-						var obj = jQuery(this);
-						var caption;
-						var fotoimg;
-						caption = obj.attr('caption');
-						if(caption=='' || caption == null) caption = obj.html();
-						fotoimg = obj.parent().parent().children().children().attr('src');
-						jQuery('#fotoklikmore').addClass('e_is_visible');
-						jQuery('#fotoklikcaption').html(caption);
-						jQuery('#fotoklikimg').attr('src', fotoimg);
+						<div class="e_col_sub col-lg-3 col-md-4 col-sm-12 col-xs-12">
+							<div id="e_sidebar_right" class="clearfix e_sidebar" role="complementary"><div class="widget aegis_widget e_widget_posts_highlight_first_2nd  e_widget">
+	<header class="e_widget_title e_style_04"><h3 class="e_title"><a href="../../../browse/more/klarifikasi" class="red_me">Klarifikasi BPOM</a></h3></header>
+	<div class="widget-content clearfix">
+		<div class="e_microdata">
+			<div class="row">
+			<div class="col-xs-12 e_right" id="urklarifikasi5depan">Loading..
+				<script>
+					jQuery(document).ready(function($){
+						setTimeout(function(){
+							$.get('http://www.pom.go.id/new/front/klarifikasi5depan', function(klarifikasi5depan){
+								if(klarifikasi5depan!=''){
+									$('#urklarifikasi5depan').html(klarifikasi5depan);
+									setInterval("rollklar()", 5000);
+								}
+							});
+						}, 1500);
 					});
-					</script>
-					<div class="e_popup e_style_01" role="alert" id="fotoklikmore">
-						<div class="e_popup_container e_style_01">
-							<img id="fotoklikimg" src="">
-							<div id="fotoklikcaption" style="color: #fff; margin-top: 10px;"></div>
-							<span class="e_icon e_popup_close"><i class="ti-close"></i></span>
+					function rollklar(){
+						var klarshow = jQuery('article.klarshow:visible');
+						klarshow = klarshow.first();
+						var showfirst = parseInt(klarshow.attr('klar'));
+						showfirst = showfirst + 5;
+						var hidefirst = jQuery("article.klarshow[name^='x"+showfirst+"done']");
+						klarshow.slideUp("slow");
+						hidefirst.slideDown("slow");
+					}
+				</script>
+			</div></div>
+		</div>
+	</div>
+</div>
+<div class="widget aegis_widget widget_categories  e_widget" >
+	<header class="e_widget_title e_style_04"><h3 class="e_title">Aplikasi Publik</h3></header>
+	<div class="widget-content clearfix">
+	<ul>
+		<li class="cat-item"><a href="http://lpse.pom.go.id/" target="_blank">LPSE <small>- <i class="blue_me">lpse.pom.go.id</i></small></a></li>
+		<li class="cat-item"><a href="http://e-bpom.pom.go.id/" target="_blank">e-BPOM <small>- <i class="blue_me">e-bpom.pom.go.id</i></small></a></li>
+		<li class="cat-item"><a href="http://e-reg.pom.go.id/" target="_blank">e-Reg Pangan Olahan <small>- <i class="blue_me">e-reg.pom.go.id</i></small></a></li>
+		<li class="cat-item"><a href="http://asrot.pom.go.id/" target="_blank">e-Reg OTSM <small>- <i class="blue_me">asrot.pom.go.id</i></small></a></li>
+		<li class="cat-item"><a href="http://aero.pom.go.id/" target="_blank">e-Reg Obat <small>- <i class="blue_me">aero.pom.go.id</i></small></a></li>
+		<li class="cat-item"><a href="http://notifkos.pom.go.id/" target="_blank">Notifikasi Kosmetika <small>- <i class="blue_me">notifkos.pom.go.id</i></small></a></li>
+	</ul>
+	</div>
+</div></div>
 						</div>
 					</div>
 				</div>
 			</section>
-			
-			
-			<section class="e_section  e_relative">
-				<div class="e_container clearfix container hide_mobile"><div class="e_col_fullwidth"><div class="e_col">
-					<div class="widget aegis_widget e_adv  e_widget_first "><div class="widget-content clearfix "><a href="javascript:void(0)"  class="jdlfotos selfotos"><img src="<?php echo base_url(); ?>data/banner_kos.jpg" alt="" class="img-responsive"></a><a href="javascript:void(0)" class="jdlfotos" last="" style="display:none;"><img src="<?php echo base_url(); ?>data/banner_ot.png" alt="" class="img-responsive"></a></div></div>
-				</div></div></div>
-			</section>
-			<script>
-				setInterval("rollfots()", 7500);
-				function rollfots(){
-					var actives = jQuery('a.selfotos');
-					var next = actives.next();
-					if(actives.attr('last')=='') 
-						var next = jQuery('a.jdlfotos').first();
-					else
-						var next = actives.next();
-					next.addClass('selfotos');
-					actives.removeClass('selfotos');
-					actives.hide();
-					next.show();
-				}
-			</script>
 		</div>		
 		<div id="e_site_footer" class="e_style_01">
 			<div class="e_top" style="padding: 20px 20px 0 20px;">
 				<div class="e_container clearfix container">
 					<div class="row">
-						<div id="e_sidebar_footer_01" role="complementary" class="e_sidebar clearfix col-xs-12 col-lg-4 col-md-4 col-sm-12">
+						<div id="e_sidebar_footer_01" role="complementary" class="e_sidebar clearfix col-xs-12 col-lg-6 col-md-6 col-sm-12">
 							<div class="widget e_custom_widget_01 e_widget_contact_information enliven-widget-order-0 enliven-widget-first enliven-widget-last" style="margin-bottom: 0">
 								<a href="<?php echo base_url(); ?>view/direct/balai"><header class="e_widget_title e_style_05"><h3 class="e_title">Kontak Kami</h3></header></a>
 								<div class="widget-content clearfix">
 									<ul class="e_list e_style_01" style="margin: -10px 0;">
-										<li style="margin-bottom: 0"><i class="e_icon fa fa-map-marker"></i>Jalan Percetakan Negara Nomor 23<br>Jakarta - 10560 - Indonesia <br/> <a href="<?php echo base_url(); ?>view/direct/balai" itemprop="url">Selengkapnya</a></li><br/>
-										<li style="margin-bottom: 15px; padding-left: 0"><img src="<?php echo base_url(); ?>web/images/halobpom.png"></li>
-										<li style="margin-bottom: 0"><i class="e_icon fa fa-phone"></i>+6221 4244691 / 42883309 / 42883462</li>
-										<li style="margin-bottom: 0"><i class="e_icon fa fa-fax"></i>+6221 4263333</li>
-										<li style="margin-bottom: 0"><i class="e_icon fa fa-mobile"></i>+6281 21 9999 533 (SMS)</li>
-										<li style="margin-bottom: 0px"><i class="e_icon fa fa-envelope"></i><a href="mailto:ppid@pom.go.id">ppid@pom.go.id</a>;&nbsp;&nbsp;<a href="mailto:halobpom@pom.go.id">halobpom@pom.go.id</a><br><a href="mailto:pengaduanyanblik@pom.go.id">pengaduanyanblik@pom.go.id</a></li>
-										<li style="margin-bottom: 0"><i class="e_icon fa fa-twitter"></i><a href="https://twitter.com/bpom_ri">@bpom_ri</a></li>
-										<li style="margin-bottom: 0"><i class="e_icon fa fa-facebook"></i><a href="https://www.facebook.com/BadanPengawasObatdanMakananRI">Badan POM</a></li>
-										<li style="margin-bottom: 0"><i class="e_icon fa fa-instagram"></i><a href="https://www.instagram.com/bpom_ri/">@bpom_ri</a></li>
-										<li style="margin-bottom: 0"><i class="e_icon fa fa-youtube"></i><a href="https://www.youtube.com/channel/UCO5Oi2m_M-uQhTaKDyGA0nA">Badan POM RI</a></li><br/>
+										<li style="margin-bottom: 0"><i class="e_icon fa fa-map-marker"></i><?php echo (isset($dataPage["address"]) ? $dataPage["address"] : ''); ?> <br/> <a href="<?php echo base_url(); ?>view/direct/balai" itemprop="url">Selengkapnya</a></li><br/>
+										<li style="margin-bottom: 15px; padding-left: 0"><img src="<?php echo base_url(); ?>assets/frontend/data/images/halobpom.png"></li>
+										<li style="margin-bottom: 0"><i class="e_icon fa fa-phone"></i><?php echo (isset($dataPage["phone"]) ? $dataPage["phone"] : ''); ?></li>
+										<li style="margin-bottom: 0"><i class="e_icon fa fa-fax"></i><?php echo (isset($dataPage["fax"]) ? $dataPage["fax"] : ''); ?></li>
+										<li style="margin-bottom: 0"><i class="e_icon fa fa-mobile"></i><?php echo (isset($dataPage["mobile"]) ? $dataPage["mobile"] : ''); ?></li>
+										<li style="margin-bottom: 0px"><i class="e_icon fa fa-envelope"></i><?php echo (isset($dataPage["email"]) ? $dataPage["email"] : ''); ?></li>
+										<li style="margin-bottom: 0"><i class="e_icon fa fa-twitter"></i><?php echo (isset($dataPage["twitter"]) ? $dataPage["twitter"] : ''); ?></li>
+										<li style="margin-bottom: 0"><i class="e_icon fa fa-facebook"></i><?php echo (isset($dataPage["facebook"]) ? $dataPage["facebook"] : ''); ?></li>
+										<li style="margin-bottom: 0"><i class="e_icon fa fa-instagram"></i><?php echo (isset($dataPage["instagram"]) ? $dataPage["instagram"] : ''); ?></li>
+										<li style="margin-bottom: 0"><i class="e_icon fa fa-youtube"></i><?php echo (isset($dataPage["youtube"]) ? $dataPage["youtube"] : ''); ?></li><br/>
 									</ul>
 								</div>
 							</div>
 						</div>
-						<div id="e_sidebar_footer_02" role="complementary" class="e_sidebar clearfix col-xs-12 col-lg-4 col-md-4 col-sm-12">
+						<div id="e_sidebar_footer_02" role="complementary" class="e_sidebar clearfix col-xs-12 col-lg-6 col-md-6 col-sm-12">
 							<div class="widget e_custom_widget_01 e_widget_tweets_list enliven-widget-order-0 enliven-widget-first enliven-widget-last">
 								<header class="e_widget_title e_style_05"><h3 class="e_title">Statistik Pengunjung</h3></header>
 								<div class="widget-content clearfix">
-									<div class="e_block e_first" style="margin-top: -10px;"><i class="e_icon fa fa-user"></i><p class="e_content">84 User</p><p class="e_meta"><a href="javascript:void(0)">Sedang Online Saat Ini</a></p></div>
-									<div class="e_block" style="margin-top: -10px;"><i class="e_icon fa fa-users"></i><p class="e_content">4208 User</p><p class="e_meta"><a href="javascript:void(0)">Pengunjung Hari Ini</a></p></div>
-									<div class="e_block" style="margin-top: -10px;"><i class="e_icon fa fa-users"></i><p class="e_content"> 1594839 User</p><p class="e_meta"><a href="javascript:void(0)">Total Pengunjung Tahun 2017</a></p></div>
-									<div class="e_block" style="margin-top: -10px;"><i class="e_icon fa fa-users"></i><p class="e_content">7827308 User</p><p class="e_meta"><a href="javascript:void(0)">Total Pengunjung Sejak 2013</a></p></div>
+									<div class="e_block e_first" style="margin-top: -10px;"><i class="e_icon fa fa-user"></i><p class="e_content"><?php echo $dataPage["visitorOnline"]; ?> User</p><p class="e_meta"><a href="javascript:void(0)">Sedang Online Saat Ini</a></p></div>
+									<div class="e_block" style="margin-top: -10px;"><i class="e_icon fa fa-users"></i><p class="e_content"><?php echo $dataPage["visitorToday"]; ?> User</p><p class="e_meta"><a href="javascript:void(0)">Pengunjung Hari Ini</a></p></div>
+									<div class="e_block" style="margin-top: -10px;"><i class="e_icon fa fa-users"></i><p class="e_content"> <?php echo $dataPage["visitorYear"]; ?> User</p><p class="e_meta"><a href="javascript:void(0)">Total Pengunjung Tahun <?php echo date("Y");?></a></p></div>
+									<div class="e_block" style="margin-top: -10px;"><i class="e_icon fa fa-users"></i><p class="e_content"><?php echo $dataPage["visitorTotal"]; ?> User</p><p class="e_meta"><a href="javascript:void(0)">Total Pengunjung</a></p></div>
 									<!-- <a href="javascript:void(0)"><img src="http://s01.flagcounter.com/count/x49Q/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_15/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" border="0"></a>-->
-								</div>
-							</div>
-						</div>
-						<div id="e_sidebar_footer_03" role="complementary" class="e_sidebar clearfix col-xs-12 col-lg-4 col-md-4 col-sm-12">
-							<div class="widget e_custom_widget_01 e_widget_posts_with_small_thumb enliven-widget-order-0 enliven-widget-first enliven-widget-last" style="margin-bottom: 0">
-								<header class="e_widget_title e_style_05"><h3 class="e_title">Polling</h3></header>
-								<div class="widget-content clearfix">
-									<p id="ppolling" style="margin-top: -10px;">Bagaimana pendapat Anda tentang tampilan dan konten website Badan POM?<br>
-										<a href="javascript:void(0)"><img src="<?php echo base_url(); ?>web/images/star_gray.png" class="a1" /><img src="<?php echo base_url(); ?>web/images/star_gray.png" class="a2" /><img src="<?php echo base_url(); ?>web/images/star_gray.png" class="a3" /><img src="<?php echo base_url(); ?>web/images/star_gray.png" class="a4" /><img src="<?php echo base_url(); ?>web/images/star_gray.png" class="a5" /></a>
-									</p>
-									<p>Hasil Polling<br>
-									<span id="urpolling"><small class="blue_me">Loading..<br> <br> <br> <br></small></span>
-									</p>
-									<p>Masukan Anda terhadap website Badan POM</p>
-									<p style="margin-top: -10px;"><form method="post" action="<?php echo base_url(); ?>front/freepolling" id="submit-form" class="search-form clearfix" style="padding-bottom: 10px"><input autocomplete="off" type="text" value="" name="masukkan" id="masukkan" class="text" style="width:75%"> &nbsp;<input type="submit" style="padding: 5px" value="KIRIM" name="kirim"></form><br>&nbsp;</p>
-									<script>
-										jQuery(document).ready(function($){
-											setTimeout(function(){
-												$.get('<?php echo base_url(); ?>front/polling/get/2', function(pollingdata){
-													if(pollingdata!='') $('#urpolling').html(pollingdata);
-												});
-											}, 3000);
-											$('#ppolling img').mouseover(function(){
-												var clsimg = $(this).attr('class');
-												var intclsimg = parseInt(clsimg.substr(1, 1));
-												for(i=1;i<6;i++){
-													if(i<=intclsimg){
-														$('#ppolling img.a' + i).attr('src', '<?php echo base_url(); ?>web/images/star.png');
-													}else{
-														$('#ppolling img.a' + i).attr('src', '<?php echo base_url(); ?>web/images/star_gray.png');
-													}
-												}
-											});
-											$('#ppolling img').click(function(){
-												var clsimg = $(this).attr('class');
-												var intclsimg = parseInt(clsimg.substr(1, 1));
-												$.get('<?php echo base_url(); ?>front/polling/set/2/' + intclsimg, function(hasilpolling){
-													alert(hasilpolling);
-												});
-											});
-										});
-									</script>
 								</div>
 							</div>
 						</div>
@@ -1333,7 +671,7 @@
 			<div class="e_bottom" style="padding: 7px; background: #1977a5">
 				<div class="e_container clearfix container">
 					<div class="row">
-						<div class="col-md-6 e_left" style="color: white">&copy 2016 - BADAN PENGAWAS OBAT DAN MAKANAN REPUBLIK INDONESIA</div>
+						<div class="col-md-6 e_left" style="color: white"><?php echo $dataPage["footer"]; ?></div>
 				</div>
 			</div>
 		</div>

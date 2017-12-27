@@ -29,6 +29,7 @@ class MY_Controller extends CI_Controller {
         $this->_getDataPageFrontend();
         $this->_getMenu();
         $this->_setSettingSite();
+        $this->_setVisitor();
     }
 
     // ----------------------------------------------------------------
@@ -76,7 +77,7 @@ class MY_Controller extends CI_Controller {
         $infoPage = $this->tabel->find_where(array('page' => 'page'));
         if (count($infoPage) > 0)
             foreach ($infoPage as $k => $v) {
-                $this->dataPage[$v->key] = nl2br($v->value);
+                $this->dataPage[$v->key] = str_replace("{{Year}}", date("Y"), htmlspecialchars_decode(nl2br($v->value)));
             }
         
     }
@@ -123,5 +124,33 @@ class MY_Controller extends CI_Controller {
         $this->tabel->_table = "static";
         $contentUrl = $this->tabel->find_where(array('page' => 'setting', 'key' => 'content_url'));
         $this->session->set_userdata('bpom_ppid_content_url', count($contentUrl) > 0 ? $contentUrl[0]->value : '');
+    }
+
+    private function _setVisitor()
+    {
+        $this->tabel->_table = "statistics";
+        $ip      = $_SERVER['REMOTE_ADDR']; // Mendapatkan IP komputer user
+        $tanggal = date("Ymd"); // Mendapatkan tanggal sekarang
+        $waktu   = time(); //
+
+        $whereData = array("ip" => $ip, "access_date" => $tanggal);
+
+        $data = $this->tabel->find_where($whereData);
+        if (count($data) > 0)
+        {
+            $this->tabel->update_where($whereData, array("hits" => $data[0]->hits + 1, "online" => $waktu));
+        }
+        else
+        {
+            $whereData["hits"] = 1;
+            $whereData["online"] = $waktu;
+            $this->tabel->insert($whereData);
+        }
+
+        $this->dataPage['visitorToday'] = $this->tabel->SelectVisitorToday($tanggal);
+        $bataswaktu = time() - 300;
+        $this->dataPage['visitorOnline'] = $this->tabel->SelectVisitorOnline($bataswaktu);
+        $this->dataPage['visitorTotal'] = $this->tabel->SelectVisitorTotal();
+        $this->dataPage['visitorYear'] = $this->tabel->SelectVisitorYear(date("Y"));
     }
 }

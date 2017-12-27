@@ -11,7 +11,7 @@ class Page extends MY_Controller {
 	{
 		$data['page'] = "frontend/home";
 		$data['dataPage'] = $this->dataPage;
-		$this->load->view('frontend/page', $data);
+		$this->load->view('frontend/page_new', $data);
 	}
 	
 	public function view($link = "", $parentName = "", $parentLink = "")
@@ -30,7 +30,7 @@ class Page extends MY_Controller {
 		$data['parentName'] = urldecode($parentName);
 		$data['parentLink'] = str_replace("_","/",$parentLink);
 		$data['page'] = "frontend/staticpage";
-		$this->load->view('frontend/page', $data);
+		$this->load->view('frontend/page_new', $data);
 	}
 }
 
