@@ -11,7 +11,17 @@ class Gallery extends MY_Controller {
 
     public function index() {
 
-        $gallery = GetListFile($this->session->userdata('bpom_ppid_content_url') . "images/");
+        /*$gallery = GetListFile($this->session->userdata('bpom_ppid_content_url') . "images/");
+        natcasesort($gallery);
+
+        $data['gallery'] = $gallery;
+        $data['title'] = "Gallery";
+        $data['page'] = "backend/gallery";
+        $this->load->view('backend/page', $data);*/
+        
+        $dir = APPCONTENT . "images/";
+        $gallery = scandir($dir);
+        $gallery = array_diff($gallery, array('.', '..', 'index.html', 'thumbs'));
         natcasesort($gallery);
 
         $data['gallery'] = $gallery;

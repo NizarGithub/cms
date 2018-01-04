@@ -65,9 +65,9 @@ class Users extends MY_Controller {
 				}
 				else if ($param['action'] == "edit")
 				{
-                    $PasswordLama = $this->tabel->find_where(array('username' => $param['username']));
+                    $PasswordLama = $this->tabel->find_where(array('id' => $param['id']));
                     if ($param['password'] != $PasswordLama[0]->password){
-                        $param['password'] = md5($PasswordLama[0]->hash . $param['Password']);
+                        $param['password'] = md5($PasswordLama[0]->hash . $param['password']);
                     }
 					$jmOperator = $this->tabel->SelectJmlOperatorCekForUpdate($param);
                                         
