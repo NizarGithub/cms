@@ -1,4 +1,4 @@
-define(['jquery', 'jquery.migrate', 'jquery.browser.mobile', 'bootstrap', 'nanoscroller'
+define(['jquery', 'jquery.migrate', 'jquery.browser.mobile', 'bootstrap', 'nanoscroller', 'bootstrap.datepicker'
     //, 'raphael', 'highcharts', 'highcharts.exporting', 'bootstrap.datepicker'
     ,'magnific.popup', 'jquery.placeholder'
     ,'jquery.popupoverlay', 'jquery.validate'

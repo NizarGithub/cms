@@ -30,6 +30,14 @@ class Page extends MY_Controller {
 		$data['parentName'] = urldecode($parentName);
 		$data['parentLink'] = str_replace("_","/",$parentLink);
 		$data['page'] = "frontend/staticpage";
+		$data['isHomepage'] = $staticPage->id == 1 ? true : false;
+
+		$this->tabel->_table = "slideshow";
+		$data['slides'] = $this->tabel->SlideshowSelectListAll();
+
+		$this->tabel->_table = "newsticker";
+		$data['newsticker'] = $this->tabel->NewstickerSelectListAll();
+		
 		$this->load->view('frontend/page_new', $data);
 	}
 }

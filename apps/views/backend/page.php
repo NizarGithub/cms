@@ -172,11 +172,43 @@
 										</a>
 									</li>
 									<li class="">
+										<a href="<?php echo base_url("backend/slideshow"); ?>">
+											<i class="fa fa-image" aria-hidden="true"></i>
+											<span>Slideshow</span>
+										</a>
+									</li>
+									<li class="">
+										<a href="<?php echo base_url("backend/newsticker"); ?>">
+											<i class="fa fa-newspaper-o" aria-hidden="true"></i>
+											<span>News ticker</span>
+										</a>
+									</li>
+									<li class="">
+										<a href="<?php echo base_url("backend/siteinfo"); ?>">
+											<i class="fa fa-info-circle" aria-hidden="true"></i>
+											<span>Site Info</span>
+										</a>
+									</li>
+									<li class="">
+										<a href="<?php echo base_url("backend/docs"); ?>">
+											<i class="fa fa-files-o" aria-hidden="true"></i>
+											<span>Files Management</span>
+										</a>
+									</li>
+									<li class="">
 										<a href="<?php echo base_url("backend/gallery"); ?>">
 											<i class="fa fa-file-image-o" aria-hidden="true"></i>
 											<span>Gallery</span>
 										</a>
 									</li>
+									<?php if ($this->session->userdata('bpom_ppid_level') == 'administrator'): ?>
+									<li class="">
+										<a href="<?php echo base_url("backend/users"); ?>">
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Users</span>
+										</a>
+									</li>
+									<?php endif; ?>
 									<?php endif; ?>
 									<!-- <li class="">
 										<a href="index.html">
@@ -192,7 +224,7 @@
 					</div>
 					
 					<div class="sidebar-footer">
-						<p class="text-muted mt-md mb-md"><?php echo $this->config->item('app_copyright'); ?> <a href="<?php echo $this->config->item('site_url'); ?>" style="white-space: normal;"><?php echo $this->config->item('site_name'); ?></a>. All rights reserved.</p>
+						<p class="text-muted mt-md mb-md"><?php echo $this->config->item('app_copyright'); ?> <a href="<?php echo base_url(); ?>" style="white-space: normal;"><?php echo $this->config->item('site_name'); ?></a>. All rights reserved.</p>
 					</div>
 									
 				

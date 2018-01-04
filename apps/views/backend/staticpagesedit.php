@@ -45,7 +45,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label" for="link">Link/Slug <span class="required">*</span></label>
                         <div class="col-sm-9">
-                           <input id="link" name="link" type="text" value="<?php echo $staticpages->link; ?>" class="form-control" required>
+                           <input id="link" name="link" type="text" value="<?php echo $staticpages->link; ?>" class="form-control" required <?php echo $id == 1 ? 'readonly="readonly"' : ''; ?>>
                         </div>
                     </div>
                     <div class="form-group">

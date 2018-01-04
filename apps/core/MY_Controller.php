@@ -90,7 +90,7 @@ class MY_Controller extends CI_Controller {
         $idx = 1;
         foreach ($list as $row){
             $result = $this->tabel->SelectMenu($row->parent_id, $lang);
-            $nav = ($idx == 1) ? '<ul>' : '<ul>';
+            $nav = ($idx == 1) ? '<ul id="e_primary_menu" class="sf-menu e_mega clearfix"><li class="menu-item"><a href="'. base_url() . '"><i class="e_icon fa fa-home" style="font-size: 16pt"></i></a></li>' : '<ul class="sub-menu">';
             foreach ($result as $res){
                 $classLi = "";
                 $submenu = "";
@@ -98,17 +98,18 @@ class MY_Controller extends CI_Controller {
                 $link = $res->is_hyperlink == 1 ? $res->link : base_url() . 'page/view/' . ($res->link_static == null ? '#' : $res->link_static);
                 if ($res->child > 0)
                 {
-                    if ($idx == 1)
-                        $classLi = "first";
-                    $submenu = $deskripsi . '<span class="'. ($idx == 1 ? "down-arrow" : "right-arrow") .'"></span>' . 'submenu-' . $res->id;
+                    /*if ($idx == 1)
+                        $classLi = "first";*/
+                    $classLi = "menu-item-has-children";
+                    $submenu = '<a href="javascript:void(0)" itemprop="url">'. $deskripsi .'</a>' . 'submenu-' . $res->id;
                 }
                 else
                 {
-                    $submenu = '<a href="'. $link .'" '. ($res->is_hyperlink == 1 ? 'target="_blank"' : '') .'>'. $deskripsi .'</a>';
+                    $submenu = '<a href="'. $link .'" '. ($res->is_hyperlink == 1 ? 'target="_blank"' : '') .' itemprop="url">'. $deskripsi .'</a>';
                 }
                 
 
-                $nav .= '<li class="'. $classLi .'">'. $submenu .'</li>';
+                $nav .= '<li class="menu-item '. $classLi .'">'. $submenu .'</li>';
             }
             $nav .= '</ul>';
             $menu = ($menu == "") ? $nav : str_replace("submenu-$row->parent_id", $nav, $menu);
@@ -116,6 +117,7 @@ class MY_Controller extends CI_Controller {
             $idx++;
         }
         
+        $this->dataPage['menuSide'] = str_replace(array('e_primary_menu', 'sf-menu e_mega', '<li class="menu-item"><a href="'. base_url() . '"><i class="e_icon fa fa-home" style="font-size: 16pt"></i></a></li>'), array('e_side_menu', 'e_style_01', '<li class="menu-item"><a href="'. base_url() . '">Beranda</a></li>'), $menu);
         $this->dataPage['menu'] = $menu;
     } 
 

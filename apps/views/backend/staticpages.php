@@ -48,14 +48,14 @@
                     ?>
                     <tr class="">
                         <td><?php echo $no;?>.</td>
-                        <td><?php echo $c->title . '<br/>(' . $c->link . ')'; ?></td>
+                        <td><?php echo $c->title . ($c->id == 1 ? ' <span class="highlight">Homepage</span>' : '') . '<br/>(' . $c->link . ')'; ?></td>
                         <!-- <td class="center"><?php echo $c->lang_id;?></td> -->
                         <td class="center">
                             <a class="btn btn-info" href="<?php echo base_url() . "backend/staticpages/edit/" . $c->id; ?>">
                                 <i class="fa fa-pencil-square-o"></i>  
                                 Edit                                            
                             </a>
-                            <a class="btn btn-danger delete" href="<?php echo base_url() . "backend/staticpages/delete/" . $c->id; ?>" about='staticpages' params='{"title": "<?php echo $c->title?>"}'>
+                            <a class="btn btn-danger delete" href="<?php echo base_url() . "backend/staticpages/delete/" . $c->id; ?>" about='staticpages' params='{"title": "<?php echo $c->title; ?>"}'>
                                 <i class="fa fa-trash-o"></i> 
                                 Delete
                             </a>

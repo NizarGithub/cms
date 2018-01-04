@@ -17,6 +17,15 @@ class Dashboard extends MY_Controller {
         $this->tabel->_table = "user";
         $jmlUser = $this->tabel->find_all();
         $data['jmlUser'] = count($jmlUser);
+        $this->tabel->_table = "page_static";
+        $jmlPages = $this->tabel->find_all();
+        $data['jmlPages'] = count($jmlPages);
+        $this->tabel->_table = "slideshow";
+        $jmlSlide = $this->tabel->find_all();
+        $data['jmlSlide'] = count($jmlSlide);
+        $this->tabel->_table = "newsticker";
+        $jmlNews = $this->tabel->find_all();
+        $data['jmlNews'] = count($jmlNews);
         $data['page'] = "backend/dashboard";
         $this->load->view('backend/page', $data);
     }

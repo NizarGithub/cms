@@ -32,7 +32,82 @@
 <div class="row">
     <div class="col-lg-6">
         <section class="panel">
+            <div class="panel-body bg-primary">
+                <div class="widget-summary">
+                    <div class="widget-summary-col widget-summary-col-icon">
+                        <div class="summary-icon">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                    </div>
+                    <div class="widget-summary-col">
+                        <div class="summary">
+                            <h4 class="title">Total Pages</h4>
+                            <div class="info">
+                                <strong class="amount"><?php echo $jmlPages; ?></strong>
+                            </div>
+                        </div>
+                        <div class="summary-footer">
+                            <a href="<?php echo base_url("backend/staticpages"); ?>" class="text-uppercase">(view all)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="col-lg-6">
+        <section class="panel">
             <div class="panel-body bg-info">
+                <div class="widget-summary">
+                    <div class="widget-summary-col widget-summary-col-icon">
+                        <div class="summary-icon">
+                            <i class="fa fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="widget-summary-col">
+                        <div class="summary">
+                            <h4 class="title">Total Slideshow</h4>
+                            <div class="info">
+                                <strong class="amount"><?php echo $jmlSlide; ?></strong>
+                            </div>
+                        </div>
+                        <div class="summary-footer">
+                            <a href="<?php echo base_url("backend/slideshow"); ?>" class="text-uppercase">(view all)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <section class="panel">
+            <div class="panel-body bg-quartenary">
+                <div class="widget-summary">
+                    <div class="widget-summary-col widget-summary-col-icon">
+                        <div class="summary-icon">
+                            <i class="fa fa-newspaper-o"></i>
+                        </div>
+                    </div>
+                    <div class="widget-summary-col">
+                        <div class="summary">
+                            <h4 class="title">Total Newsticker</h4>
+                            <div class="info">
+                                <strong class="amount"><?php echo $jmlNews; ?></strong>
+                            </div>
+                        </div>
+                        <div class="summary-footer">
+                            <a href="<?php echo base_url("backend/newsticker"); ?>" class="text-uppercase">(view all)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <?php if ($this->session->userdata('bpom_ppid_level') == 'administrator'): ?>
+    <div class="col-lg-6">
+        <section class="panel">
+            <div class="panel-body bg-secondary">
                 <div class="widget-summary">
                     <div class="widget-summary-col widget-summary-col-icon">
                         <div class="summary-icon">
@@ -54,6 +129,7 @@
             </div>
         </section>
     </div>
+    <?php endif; ?>
 </div>
 <!-- end: page -->
 

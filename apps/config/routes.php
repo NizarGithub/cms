@@ -45,6 +45,8 @@ $route['adminarea'] = 'backend/dashboard';
 $route['login'] = 'auth/login';
 $route['logout'] = 'auth/logout';
 
+$route['users/([a-z]+)'] = "backend/users/actionuser/$1";
+
 $route['entri/harga-perdesaan'] = 'entri/hd';
 $route['entri/harga-perdesaan/([a-z]+)'] = "entri/hd/$1";
 $route['entri/harga-konsumen-perdesaan'] = 'entri/hkd';
@@ -53,7 +55,7 @@ $route['entri/harga-perdesaan/([a-z]+)'] = "entri/hd/$1";
 $route['master/wilayah/([a-z]+)'] = "master/action/$1";
 $route['master/petugas/([a-z]+)'] = "master/action/$1";
 $route['master/kualitas/([a-z]+)'] = "master/action/$1";
-$route['master/operator/([a-z]+)'] = "master/actionoper/$1";
+
 $route['master/kecamatan-kualitas'] = "master/kecamatankualitas";
 $route['master/kecamatan-kualitas/([a-z]+)'] = "master/actionkeckualitas/$1";
 

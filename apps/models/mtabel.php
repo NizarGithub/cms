@@ -138,4 +138,48 @@ SELECT COUNT(ip) jml FROM statistics WHERE YEAR(access_date) = ?";
         $sql->free_result();
         return $data;
     }
+
+    public function SelectJmlOperatorCekForUpdate($param){
+        $where = "";
+        $query = "
+SELECT COUNT(*) jml FROM `user`
+  WHERE username = ? AND id != ? $where";
+   
+        $sql = $this->db->query($query, array($param['username'],$param['id']));
+        $data = 0;
+        //if ($sql->num_rows() > 0)
+            $data = $sql->row()->jml;
+        //$sql->free_result();
+        return $data;
+    }
+
+    public function SlideshowSelectListAll(){
+        $query = "SELECT A.*, B.deskripsi AS language FROM `slideshow` A LEFT JOIN lang B ON A.lang_id = B.lang_id ORDER BY lang_id, sorter";
+        $sql = $this->db->query($query);
+        $data = null;
+        if ($sql->num_rows() > 0)
+            $data = $sql->result();
+        $sql->free_result();
+        return $data;
+    }
+
+    public function SelectNextSorter($lang = "ina", $table){
+        $query = "SELECT MAX(sorter) + 1 sorter FROM $table WHERE lang_id = '$lang'";
+        $sql = $this->db->query($query);
+        $sorter = null;
+        if ($sql->num_rows() > 0)
+            $sorter = $sql->row()->sorter;
+        $sql->free_result();
+        return $sorter;
+    }
+
+    public function NewstickerSelectListAll(){
+        $query = "SELECT A.*, B.deskripsi AS language FROM `newsticker` A LEFT JOIN lang B ON A.lang_id = B.lang_id ORDER BY lang_id, sorter";
+        $sql = $this->db->query($query);
+        $data = null;
+        if ($sql->num_rows() > 0)
+            $data = $sql->result();
+        $sql->free_result();
+        return $data;
+    }
 }

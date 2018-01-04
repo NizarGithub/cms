@@ -1,4 +1,4 @@
-define(['jquery','jquery.browser.mobile','bootstrap','nanoscroller'
+define(['jquery','jquery.browser.mobile','bootstrap','nanoscroller', 'bootstrap.datepicker'
 	//,'raphael','highcharts','highcharts.exporting','bootstrap.datepicker','magnific.popup','jquery.placeholder'
 	//,'jquery.validate','owl.carousel'
 	,'pnotify.custom','theme','theme.custom','theme.init'
