@@ -184,21 +184,21 @@
 										</a>
 									</li>
 									<li class="">
-										<a href="<?php echo base_url("backend/siteinfo"); ?>">
-											<i class="fa fa-info-circle" aria-hidden="true"></i>
-											<span>Site Info</span>
-										</a>
-									</li>
-									<li class="">
 										<a href="<?php echo base_url("backend/docs"); ?>">
-											<i class="fa fa-files-o" aria-hidden="true"></i>
-											<span>Files Management</span>
+											<i class="fa fa-folder-o" aria-hidden="true"></i>
+											<span>File Manager</span>
 										</a>
 									</li>
-									<li class="">
+									<!-- <li class="">
 										<a href="<?php echo base_url("backend/gallery"); ?>">
 											<i class="fa fa-file-image-o" aria-hidden="true"></i>
 											<span>Gallery</span>
+										</a>
+									</li> -->
+									<li class="">
+										<a href="<?php echo base_url("backend/siteinfo"); ?>">
+											<i class="fa fa-gears" aria-hidden="true"></i>
+											<span>Settings</span>
 										</a>
 									</li>
 									<?php if ($this->session->userdata('bpom_ppid_level') == 'administrator'): ?>

@@ -2,7 +2,7 @@
 
 </script>
 <header class="page-header">
-    <h2>Site Info</h2>
+    <h2>Settings</h2>
 
     <div class="right-wrapper pull-right">
         <ol class="breadcrumbs">
@@ -12,7 +12,7 @@
                 </a>
             </li>
             <li>
-                <span>Site Info</span>
+                <span>Settings</span>
             </li>
         </ol>
 
@@ -30,7 +30,7 @@
                         <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
                     </div>
 
-                    <h2 class="panel-title"><i class="fa fa-pencil-square-o"></i> Site Info</h2>
+                    <h2 class="panel-title"><i class="fa fa-gears"></i> Settings</h2>
                 </header>
                 <div class="panel-body" id="LoadingOverlayApi" data-loading-overlay>
                     <?php if (count($siteinfo) > 0): ?>

@@ -2,7 +2,7 @@
 
 </script>
 <header class="page-header">
-    <h2>Files Management</h2>
+    <h2>File Manager</h2>
 
     <div class="right-wrapper pull-right">
         <ol class="breadcrumbs">
@@ -11,7 +11,7 @@
                     <i class="fa fa-home"></i>
                 </a>
             </li>
-            <li><span>Files Management</span></li>
+            <li><span>File Manager</span></li>
         </ol>
 
         <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>

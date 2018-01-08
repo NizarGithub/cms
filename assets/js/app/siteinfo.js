@@ -28,9 +28,10 @@ define(['jquery', 'jquery.migrate', 'jquery.ui', 'jquery.browser.mobile', 'boots
 
                 if ($('.ckeditor-textarea').length > 0)
                     $( '.ckeditor-textarea' ).ckeditor({
-                        "extraPlugins": "imagebrowser",
+                        /*"extraPlugins": "imagebrowser",
                         "imageBrowser_listUrl": $baseUrl + "content/list.json",
-                        "imageBrowser_contentUrl": $contentUrl,
+                        "imageBrowser_contentUrl": $contentUrl,*/
+                        filebrowserBrowseUrl : $baseUrl + 'backend/filemanager?cu=' + $contentUrl,
                         "height": 100
                     });
 

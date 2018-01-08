@@ -13,7 +13,7 @@ class Siteinfo extends MY_Controller {
 
         $data['title'] = "Site Info";
         $this->tabel->_table = "static";
-        $data['siteinfo'] = $this->tabel->find_where(array("page" => "page"));
+        $data['siteinfo'] = $this->tabel->find_all();//find_where(array("page" => "page"));
         $data['page'] = "backend/siteinfo";
         $this->load->view('backend/page', $data);
     }
@@ -33,7 +33,7 @@ class Siteinfo extends MY_Controller {
             else
                 $dataSave['value'] = trim(htmlspecialchars( (string)$value ));
 
-            $this->tabel->update_where(array("page" => "page", "key" => $key), $dataSave);
+            $this->tabel->update_where(array("key" => $key), $dataSave);
         }
 
         $msgBack = array();
