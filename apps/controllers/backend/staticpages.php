@@ -44,6 +44,12 @@ class Staticpages extends MY_Controller {
         else{
             $dataSave['content'] = htmlspecialchars( str_replace($this->session->userdata('bpom_ppid_content_url'), "{{contenturl}}", (string)$data['content']));
         }
+        if ( get_magic_quotes_gpc() ){
+            $dataSave['short_desc'] = htmlspecialchars( stripslashes((string)$data['short_desc']) );
+        }
+        else{
+            $dataSave['short_desc'] = htmlspecialchars( (string)$data['short_desc']);
+        }
         $dataSave['lang_id'] = $data['lang_id'];
         $dataSave['date_create'] = date('Y-m-d H:i:s');
 
@@ -87,6 +93,12 @@ class Staticpages extends MY_Controller {
         }
         else{
             $dataSave['content'] = htmlspecialchars( str_replace($this->session->userdata('bpom_ppid_content_url'), "{{contenturl}}", (string)$data['content']) );
+        }
+        if ( get_magic_quotes_gpc() ){
+            $dataSave['short_desc'] = htmlspecialchars( stripslashes((string)$data['short_desc']) );
+        }
+        else{
+            $dataSave['short_desc'] = htmlspecialchars( (string)$data['short_desc']);
         }
         $dataSave['lang_id'] = $data['lang_id'];
         $dataSave['date_update'] = date('Y-m-d H:i:s');

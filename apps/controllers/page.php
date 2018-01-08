@@ -26,7 +26,7 @@ class Page extends MY_Controller {
 		
 		$data['dataPage'] = $this->dataPage;
 		$data['titlePage'] = $staticPage->title;
-		$data['content'] = str_replace("{{contenturl}}", $this->session->userdata('bpom_ppid_content_url'), htmlspecialchars_decode($staticPage->content));
+		$data['content'] = str_replace("{{contenturl}}", $this->session->userdata('bpom_ppid_content_url'), htmlspecialchars_decode($staticPage->content)) . htmlspecialchars_decode($staticPage->short_desc);
 		$data['parentName'] = urldecode($parentName);
 		$data['parentLink'] = str_replace("_","/",$parentLink);
 		$data['page'] = "frontend/staticpage";

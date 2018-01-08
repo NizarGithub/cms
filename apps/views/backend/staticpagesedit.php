@@ -55,6 +55,11 @@
                             <textarea cols="80" class="ckeditor-textarea form-control" id="content-desc" name="content-desc" rows="10">
                                 <?php echo str_replace("{{contenturl}}", $this->session->userdata('bpom_ppid_content_url'), htmlspecialchars_decode($staticpages->content)); ?>
                             </textarea>
+                            <a id="view-designer" class="mb-xs mt-xs mr-xs btn btn-success btn-block" href="">
+                                <i class="fa fa-paint-brush"></i>
+                                Edit in Designer                                            
+                            </a>
+                            <div id="cssjs" style="display:none"><?php echo htmlspecialchars_decode($staticpages->short_desc); ?></div>
                         </div>
                     </div>
                     <div class="form-group" style="display: none;">
@@ -79,6 +84,34 @@
                 </footer>
             </section>
         </form>
+    </div>
+</div>
+<div id="modalDesigner" class="modal-block modal-block-full mfp-hide">
+    <section class="panel">
+        <header class="panel-heading">
+            <h2 class="panel-title">Page Designer</h2>
+        </header>
+        <div class="panel-body">
+            <div class="modal-wrapper">
+                <iframe id="iframe_designer" src="<?php echo base_url("backend/designer/view"); ?>" style="border: none;" width="100%"></iframe>
+            </div>
+        </div>
+        <footer class="panel-footer">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <button id="btn-save" class="btn btn-primary modal-confirm">Save</button>
+                    <button class="btn btn-default closeconfirm_open">Cancel</button>
+                </div>
+            </div>
+        </footer>
+    </section>
+</div>
+<div id="closeconfirm" class="well">
+    <h5>Data yang Anda ubah tidak akan disimpan.<br/>Apakah Anda yakin akan keluar dari designer ini?</h5>
+    <hr/>
+    <div class="text-right">
+    <button id="closeok" class="btn btn-default mr-sm" style><i class="fa fa-check"></i> Ya</button>
+    <button class="closeconfirm_close btn btn-default"><i class="fa fa-times"></i> Tidak</button>
     </div>
 </div>
 <!-- end: page -->
