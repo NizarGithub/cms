@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = "page/view/beranda";
-$route['404_override'] = '';
+$route['404_override'] = 'page/view/page-404';
 
 $route['adminarea'] = 'backend/dashboard';
 $route['login'] = 'auth/login';

@@ -20,7 +20,12 @@ class Page extends MY_Controller {
 		$staticPage = $this->tabel->find_where(array("link" => $link, "lang_id" => $this->language));
 		
 		if (count($staticPage) == 0)
-			show_404($link);
+		{
+			$staticPage = $this->tabel->find_where(array("link" => "page-404", "lang_id" => $this->language));
+			if (count($staticPage) == 0)
+				show_404($link);
+			//$this->view('page-404');
+		}
 
 		$staticPage = $staticPage[0];
 		
@@ -31,6 +36,7 @@ class Page extends MY_Controller {
 		$data['parentLink'] = str_replace("_","/",$parentLink);
 		$data['page'] = "frontend/staticpage";
 		$data['isHomepage'] = $staticPage->id == 1 ? true : false;
+		$data['isSharing'] = $staticPage->is_sharing;
 
 		$this->tabel->_table = "slideshow";
 		$data['slides'] = $this->tabel->SlideshowSelectListAll();

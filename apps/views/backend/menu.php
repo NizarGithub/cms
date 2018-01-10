@@ -23,6 +23,10 @@
     <div class="col-lg-12">
         <section class="panel panel-horizontal">
             <div class="panel-body">
+                <a id="add-top-menu" class="mb-sm ml-md mr-md btn btn-success pull-right" href="">
+                    <i class="fa fa-plus"></i>
+                    Add Menu                                           
+                </a>
                 <div class="col-md-12">
                     <div class="dd" id="nestable">
                         <?php echo $menuAll; ?>

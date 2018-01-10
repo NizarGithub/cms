@@ -62,6 +62,15 @@
                             <div id="cssjs" style="display:none"><?php echo htmlspecialchars_decode($staticpages->short_desc); ?></div>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" for="is_sharing">Allowed To Shared? <span class="required">*</span></label>
+                        <div class="col-sm-2">
+                            <select id="is_sharing" name="is_sharing" class="form-control mb-md" required>
+                                <option value="1" <?php echo $staticpages->is_sharing ? 'Selected="Selected"' : ''; ?>>Yes</option>
+                                <option value="0" <?php echo !$staticpages->is_sharing ? 'Selected="Selected"' : ''; ?>>No</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="form-group" style="display: none;">
                         <label class="col-sm-3 control-label" for="lang_id">Language <span class="required">*</span></label>
                         <div class="col-sm-3">

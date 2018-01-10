@@ -37,6 +37,7 @@
                       <tr>
                           <th>No</th>
                           <th>Title (Link)</th>
+                          <th>Allowed To Shared?</th>
                           <!-- <th>Language</th> -->
                           <th>Actions</th>
                       </tr>
@@ -49,6 +50,7 @@
                     <tr class="">
                         <td><?php echo $no;?>.</td>
                         <td><?php echo $c->title . ($c->id == 1 ? ' <span class="highlight">Homepage</span>' : '') . '<br/>(' . $c->link . ')'; ?></td>
+                        <td class="center"><?php echo $c->is_sharing ? '<span class="text-primary">Yes</span>' : '<span class="text-danger">No</span>';?></td>
                         <!-- <td class="center"><?php echo $c->lang_id;?></td> -->
                         <td class="center">
                             <a class="btn btn-info" href="<?php echo base_url() . "backend/staticpages/edit/" . $c->id; ?>">

@@ -94,6 +94,7 @@ define(['jquery', 'jquery.migrate', 'jquery.browser.mobile', 'bootstrap', 'nanos
                                 content : $("#content-desc").val(),
                                 lang_id : $("#lang_id").val(),
                                 short_desc : $("#cssjs").html(),
+                                is_sharing : $("#is_sharing").val()
                             }
                             
                             //alert (JSON.stringify(data));

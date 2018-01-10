@@ -38,6 +38,7 @@ class Staticpages extends MY_Controller {
         $dataSave = array();
         $dataSave['title'] = $data['title'];
         $dataSave['link'] = $data['link'];
+        $dataSave['is_sharing'] = $data['is_sharing'] == "1" ? true : false;
         if ( get_magic_quotes_gpc() ){
             $dataSave['content'] = htmlspecialchars( stripslashes(str_replace($this->session->userdata('bpom_ppid_content_url'), "{{contenturl}}", (string)$data['content'])) );
         }
@@ -88,6 +89,7 @@ class Staticpages extends MY_Controller {
         $dataSave = array();
         $dataSave['title'] = $data['title'];
         $dataSave['link'] = $data['link'];
+        $dataSave['is_sharing'] = $data['is_sharing'] == "1" ? true : false;
         if ( get_magic_quotes_gpc() ){
             $dataSave['content'] = htmlspecialchars( stripslashes(str_replace($this->session->userdata('bpom_ppid_content_url'), "{{contenturl}}", (string)$data['content'])) );
         }

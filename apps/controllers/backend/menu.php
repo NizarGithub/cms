@@ -36,13 +36,21 @@ class Menu extends MY_Controller {
         $this->tabel->_table = "menu";
         $param = $this->input->post('param');
         $param['lang_id'] = "ina";
+        $param['parent_id'] = $param['parent_id'] == "" ? null : $param['parent_id'];
         $param['id_pagestatic'] = $param['id_pagestatic'] == "" ? null : $param['id_pagestatic'];
         $param['link'] = $param['link'] == "" ? null : $param['link'];
         $param['is_hyperlink'] = $param['is_hyperlink'] == "1" ? true : false;
         if ($param['action'] == "add")
         {
-            $dataParent = $this->tabel->find_by_id($param['parent_id']);
-            $param['level'] = intval($dataParent[0]->level) + 1;
+            if ($param['parent_id'] == null)
+            {
+                $param['level'] = 1;
+            }
+            else
+            {
+                $dataParent = $this->tabel->find_by_id($param['parent_id']);
+                $param['level'] = intval($dataParent[0]->level) + 1;
+            }
             $dataSibling = $this->tabel->find_by_parent_id($param['parent_id']);
             $param['sorter'] = count($dataSibling) + 1;
             $param['date_create'] = date('Y-m-d H:i:s');
@@ -148,7 +156,7 @@ class Menu extends MY_Controller {
                 $deskripsi = htmlspecialchars(nl2br($res->deskripsi));
                 if ($res->child > 0)
                 {
-                    $submenu = 'submenu-' . $res->id;
+                    $submenu = '{submenu-' . $res->id . '}';
                 }
                 $link = $res->is_hyperlink == 1 ? $res->link : ($res->link_static == null ? '#' : $res->link_static);
                 $nav .= '<li class="dd-item" data-id="'. $res->id .'" data-deskripsi="'. $deskripsi .'">
@@ -160,7 +168,7 @@ class Menu extends MY_Controller {
                         </li>';
             }
             $nav .= '</ol>';
-            $menu = ($menu == "") ? $nav : str_replace("submenu-$row->parent_id", $nav, $menu);
+            $menu = ($menu == "") ? $nav : str_replace("{submenu-$row->parent_id}", $nav, $menu);
             //$menu[$row->parent_id] = $nav;
             $idx++;
         }

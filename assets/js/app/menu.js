@@ -254,6 +254,15 @@ define(['jquery', 'jquery.migrate', 'jquery.browser.mobile', 'bootstrap', 'nanos
                         return false;
                 });
 
+                $('#add-top-menu').on('click', function(){
+                    var parent = {
+                        id : '',
+                        deskripsi : ''
+                    };
+                    ShowMenu('add', parent);
+                    return false;
+                });
+
                 $('#closeconfirm').popup({
                     transition: 'all 0.3s'
                 });

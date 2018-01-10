@@ -101,7 +101,7 @@ class MY_Controller extends CI_Controller {
                     /*if ($idx == 1)
                         $classLi = "first";*/
                     $classLi = "menu-item-has-children";
-                    $submenu = '<a href="javascript:void(0)" itemprop="url">'. $deskripsi .'</a>' . 'submenu-' . $res->id;
+                    $submenu = '<a href="javascript:void(0)" itemprop="url">'. $deskripsi .'</a>' . '{submenu-' . $res->id . '}';
                 }
                 else
                 {
@@ -112,7 +112,7 @@ class MY_Controller extends CI_Controller {
                 $nav .= '<li class="menu-item '. $classLi .'">'. $submenu .'</li>';
             }
             $nav .= '</ul>';
-            $menu = ($menu == "") ? $nav : str_replace("submenu-$row->parent_id", $nav, $menu);
+            $menu = ($menu == "") ? $nav : str_replace("{submenu-$row->parent_id}", $nav, $menu);
             //$menu[$row->parent_id] = $nav;
             $idx++;
         }

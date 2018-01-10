@@ -169,6 +169,8 @@
 							<section id="e_post_wrap">
 								
 								<?php echo $this->load->view($page); ?>
+
+								<?php if ($isSharing): ?>
 								
 								<aside class="e_aside e_padding">
 									<div class="widget e_widget_share_buttons e_style_01">
@@ -180,6 +182,9 @@
 										</div>
 									</div>
 								</aside>
+
+							<?php endif; ?>
+
 							</section>
 						</div>
 						<div class="e_col_sub col-lg-3 col-md-4 col-sm-12 col-xs-12">
