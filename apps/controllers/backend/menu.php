@@ -160,10 +160,12 @@ class Menu extends MY_Controller {
                 }
                 $link = $res->is_hyperlink == 1 ? $res->link : ($res->link_static == null ? '#' : $res->link_static);
                 $nav .= '<li class="dd-item" data-id="'. $res->id .'" data-deskripsi="'. $deskripsi .'">
-                            <div class="dd-handle">'. $deskripsi .' [<span class="text-primary">'. $link .'</span>]
+                            <div>
                                 <a href="' . base_url() . 'backend/menu/delete/' . $res->id .'" type="button" class="delete-menu ml-xs btn btn-xs btn-danger pull-right"><i class="fa fa-times"></i> </a>
                                 <button type="button" class="edit-menu ml-xs btn btn-xs pull-right"><i class="fa fa-pencil"></i> </button>
                                 <button type="button" class="add-menu btn btn-xs btn-primary pull-right"><i class="fa fa-plus"></i> </button>
+                            </div>
+                            <div class="dd-handle">'. $deskripsi .' [<span class="text-primary">'. $link .'</span>]
                             </div> '. $submenu .'
                         </li>';
             }
